@@ -1,9 +1,9 @@
-export default function ReactIcon() {
+export default function ReactIcon(width?: number, height?: number) {
   return (
     <svg
-      height="50"
+      width={width || 50}
+      height={height || 50}
       viewBox="0 0 50 50"
-      width="50"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g fill="none" fill-rule="nonzero">

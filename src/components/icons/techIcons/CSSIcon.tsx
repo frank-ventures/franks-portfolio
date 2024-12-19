@@ -1,8 +1,8 @@
-export default function CSSIcon() {
+export default function CSSIcon(width?: number, height?: number) {
   return (
     <svg
-      height="50"
-      width="50"
+      width={width || 50}
+      height={height || 50}
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
     >

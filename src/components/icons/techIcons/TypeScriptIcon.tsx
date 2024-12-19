@@ -1,10 +1,10 @@
-export default function TypeScriptIcon() {
+export default function TypeScriptIcon(width?: number, height?: number) {
   return (
     <svg
-      height="50"
+      width={width || 50}
+      height={height || 50}
       preserveAspectRatio="xMidYMid"
       viewBox="0 0 256 256"
-      width="50"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

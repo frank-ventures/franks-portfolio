@@ -1,10 +1,10 @@
-export default function NextJsIcon() {
+export default function NextJsIcon(width?: number, height?: number) {
   return (
     <svg
+      width={width || 50}
+      height={height || 50}
       fill="none"
-      height="50"
       viewBox="0 0 15 15"
-      width="50"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

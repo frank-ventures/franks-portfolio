@@ -1,6 +1,18 @@
 export default function Credits() {
   const iconCredits = [
     {
+      title: "HTML Icon",
+      link: "https://icons8.com/icons/set/html",
+    },
+    {
+      title: "CSS Icon",
+      link: "https://iconduck.com/icons/101876/file-type-css",
+    },
+    {
+      title: "Javascript Icon",
+      link: "https://commons.wikimedia.org/wiki/File:Javascript-shield.svg",
+    },
+    {
       title: "React Icon",
       link: "https://iconduck.com/icons/144846/react",
     },
@@ -13,16 +25,8 @@ export default function Credits() {
       link: "https://iconduck.com/icons/95017/typescript-icon",
     },
     {
-      title: "CSS Icon",
-      link: "https://iconduck.com/icons/101876/file-type-css",
-    },
-    {
-      title: "React Icon",
-      link: "",
-    },
-    {
-      title: "React Icon",
-      link: "",
+      title: "Tailwind Icon",
+      link: "https://commons.wikimedia.org/wiki/File:Tailwind_CSS_Logo.svg",
     },
   ];
 

@@ -1,6 +1,9 @@
 import CSSIcon from "@/components/icons/techIcons/CSSIcon";
+import HTMLIcon from "@/components/icons/techIcons/HTMLIcon";
+import JavaScriptIcon from "@/components/icons/techIcons/JavaScriptIcon";
 import NextJsIcon from "@/components/icons/techIcons/NextJsIcon";
 import ReactIcon from "@/components/icons/techIcons/ReactIcon";
+import TailwindIcon from "@/components/icons/techIcons/TailwindIcon";
 import TypeScriptIcon from "@/components/icons/techIcons/TypeScriptIcon";
 import { ReactNode } from "react";
 
@@ -14,7 +17,7 @@ type TechStacks = {
   id: number;
   title: string;
   colour: string;
-  icon: ReactNode;
+  icon: (width?: number, height?: number) => ReactNode;
 };
 type Project = {
   title: string;
@@ -55,43 +58,43 @@ const techStacks: TechStacks[] = [
     id: 1,
     title: "JavaScript",
     colour: "yellow",
-    icon: "sumPath",
+    icon: (width, height) => JavaScriptIcon(width, height),
   },
   {
     id: 2,
     title: "CSS",
     colour: "purple",
-    icon: CSSIcon(),
+    icon: (width, height) => CSSIcon(width, height),
   },
   {
     id: 3,
     title: "HTML",
     colour: "orange",
-    icon: "sumPath",
+    icon: (width, height) => HTMLIcon(width, height),
   },
   {
     id: 4,
     title: "React",
     colour: "blue",
-    icon: ReactIcon(),
+    icon: (width, height) => ReactIcon(width, height),
   },
   {
     id: 5,
     title: "NextJS",
     colour: "black",
-    icon: NextJsIcon(),
+    icon: (width, height) => NextJsIcon(width, height),
   },
   {
     id: 6,
     title: "TypeScript",
     colour: "darkblue",
-    icon: TypeScriptIcon(),
+    icon: (width, height) => TypeScriptIcon(width, height),
   },
   {
     id: 7,
     title: "Tailwind",
     colour: "teal",
-    icon: "sumPath",
+    icon: (width, height) => TailwindIcon(width, height),
   },
 ];
 
@@ -124,7 +127,7 @@ const projects: Project[] = [
     liveLink: "so gud",
   },
   {
-    title: "'Ainsley Harriot'-themed Cookie Clicker",
+    title: "'Ainsley Harriot'-themed Clicker Game",
     image: "sumPath",
     status: 1,
     techStack: [4, 2],
