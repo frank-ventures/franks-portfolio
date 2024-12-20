@@ -18,7 +18,10 @@ export default function TechStack({ techStack }: { techStack: number[] }) {
             <div className="p-1 border rounded-md bg-white bg-opacity-95">
               {stack?.icon(35, 35)}
             </div>
-            <p className="text-sm text-opacity-60 text-black">{stack?.title}</p>
+
+            <p className="mt-1 text-xs text-opacity-60 text-black">
+              {stack?.title}
+            </p>
           </div>
         );
       })}
