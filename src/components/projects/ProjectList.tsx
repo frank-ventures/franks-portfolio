@@ -5,6 +5,7 @@ import Link from "next/link";
 import { dashify } from "@/helpers/dashify";
 import GithubIcon from "../icons/techIcons/GithubIcon";
 import PlayIcon from "../icons/techIcons/PlayIcon";
+import ProjectImage from "./ProjectImage";
 
 export default function ProjectsList() {
   const projects = getProjects();
@@ -32,8 +33,11 @@ export default function ProjectsList() {
               </h3>
             </div>
 
+            {/* Image */}
+            <ProjectImage src={project.image} alt={project.alt} />
+
             {/* Description */}
-            <div className="m-8">
+            <div className="m-6">
               <p>{project.description}</p>
             </div>
 

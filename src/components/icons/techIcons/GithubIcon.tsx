@@ -3,7 +3,7 @@ export default function GithubIcon(width?: number, height?: number) {
     <svg
       width={width || 50}
       height={height || 50}
-      viewBox="0 0 20 20"
+      viewBox="-1.5 -1.5 23 23"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
     >

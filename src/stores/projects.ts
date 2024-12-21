@@ -25,6 +25,7 @@ type TechStacks = {
 type Project = {
   title: string;
   image: string;
+  alt: string;
   status: number;
   techStack: number[];
   description: string;
@@ -128,17 +129,19 @@ const techStacks: TechStacks[] = [
 const projects: Project[] = [
   {
     title: "Monthly Finances Calculator",
-    image: "sumPath",
+    image: "/projects/monthly-finances.png",
+    alt: "Shows a box displaying a users income, and their caluclated take-home pay after taxes.",
     status: 1,
     techStack: [4, 7],
     description:
-      "I wanted to see how much of my income was leftover to put into savings pots, after taxes and expenses. I turned a spreadsheet (YAWN) into this app.",
+      "I wanted to see how much of my income was leftover to put into savings pots, after taxes and expenses. I turned a spreadsheet (YAWN) into this app. It`s colourful, and does the maths for you!",
     githubRepo: "https://github.com/frank-ventures/monthly-finances-visualiser",
     liveLink: "https://monthly-financer.onrender.com/",
   },
   {
     title: "DarkTiculate",
     image: "sumPath",
+    alt: "projectimage",
     status: 2,
     techStack: [5, 7, 8],
     description:
@@ -149,6 +152,7 @@ const projects: Project[] = [
   {
     title: "Stoic Quoter",
     image: "sumPath",
+    alt: "projectimage",
     status: 1,
     techStack: [5, 7, 10],
     description: "A simple, minimal app which lets you see a Stoic quote.",
@@ -158,6 +162,7 @@ const projects: Project[] = [
   {
     title: "Gamelog",
     image: "sumPath",
+    alt: "projectimage",
     status: 2,
     techStack: [5, 7, 10, 11],
     description:
@@ -168,6 +173,7 @@ const projects: Project[] = [
   {
     title: "'Ainsley Harriot'-themed Clicker Game",
     image: "sumPath",
+    alt: "projectimage",
     status: 1,
     techStack: [4, 2],
     description:
@@ -178,6 +184,7 @@ const projects: Project[] = [
   {
     title: "Unsplash Gallery Search App",
     image: "sumPath",
+    alt: "projectimage",
     status: 1,
     techStack: [1, 2, 3, 10],
     description:
