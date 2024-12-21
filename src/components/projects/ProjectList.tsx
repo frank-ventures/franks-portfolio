@@ -11,26 +11,29 @@ export default function ProjectsList() {
   const projects = getProjects();
 
   return (
-    <section className="flex flex-col gap-2 border border-black ">
-      <h2 id="#hellohere" className="text-4xl text-center">
-        My Projects yay
-      </h2>
+    <section className="flex flex-col items-center gap-2 border border-black ">
+      <div className="mt-4 bg-red-600 border-2 border-black p-2 w-10/12 rounded-2xl">
+        <h2 className="text-3xl text-center text-yellow-300 text-shadow-withOutline shadow-black ">
+          Check out my projects
+        </h2>
+      </div>
+
       {projects.map((project, index) => {
         return (
           <article
             key={`project_${index}`}
-            className="flex flex-col gap-2 p-4 m-2 border bg-orange-200"
+            className="flex flex-col gap-2 p-4 m-2 border-4 border-black bg-red-200 "
           >
             {/* Status and Title */}
             <div className="flex justify-between gap-1 last:m-10 ">
               <Status status={project.status} />
 
-              <h3
+              <h2
                 id={`${dashify(project.title)}`}
-                className="text-3xl text-right"
+                className="text-3xl text-right text-yellow-300  shadow-black text-outline"
               >
                 <a href={`#${dashify(project.title)}`}>{project.title}</a>
-              </h3>
+              </h2>
             </div>
 
             {/* Image */}
@@ -43,8 +46,18 @@ export default function ProjectsList() {
 
             {/* Links */}
             <div className="flex justify-center gap-8">
-              <Link href={project.githubRepo}>{GithubIcon(50, 50)} </Link>
-              <Link href={project.liveLink}>{PlayIcon(50, 50)}</Link>
+              <Link
+                className="bg-blue-400 rounded-3xl bg-opacity-75 hover:shadow-lg hover:transform hover:scale-110 transition duration-200"
+                href={project.githubRepo}
+              >
+                {GithubIcon(75, 75)}{" "}
+              </Link>
+              <Link
+                className="bg-blue-400 rounded-3xl bg-opacity-75 hover:shadow-lg hover:transform hover:scale-110 transition duration-200 hover:animate-pulse"
+                href={project.liveLink}
+              >
+                {PlayIcon(75, 75)}
+              </Link>
             </div>
 
             <TechStack techStack={project.techStack} />
