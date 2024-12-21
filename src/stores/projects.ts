@@ -140,7 +140,7 @@ const projects: Project[] = [
   },
   {
     title: "DarkTiculate",
-    image: "sumPath",
+    image: "/projects/darkticulate.png",
     alt: "projectimage",
     status: 2,
     techStack: [5, 7, 8],

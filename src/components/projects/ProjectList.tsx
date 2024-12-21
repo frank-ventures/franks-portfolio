@@ -18,52 +18,55 @@ export default function ProjectsList() {
         </h2>
       </div>
 
-      {projects.map((project, index) => {
-        return (
-          <article
-            key={`project_${index}`}
-            className="flex flex-col gap-2 p-4 m-2 border-4 border-black bg-red-200 "
-          >
-            {/* Status and Title */}
-            <div className="flex justify-between gap-1 last:m-10 ">
-              <Status status={project.status} />
+      {/* TODO: Fix issue where cards are different widths. It's probs to do with images */}
+      <div className="flex max-w-full flex-wrap justify-center">
+        {projects.map((project, index) => {
+          return (
+            <article
+              key={`project_${index}`}
+              className="flex flex-col gap-2 p-4 m-2 border-2 border-black bg-red-200 max-w-[500px]"
+            >
+              {/* Status and Title */}
+              <div className="flex justify-between gap-1 last:m-10 ">
+                <Status status={project.status} />
 
-              <h2
-                id={`${dashify(project.title)}`}
-                className="text-3xl text-right text-yellow-300  shadow-black text-outline"
-              >
-                <a href={`#${dashify(project.title)}`}>{project.title}</a>
-              </h2>
-            </div>
+                <h2
+                  id={`${dashify(project.title)}`}
+                  className="text-3xl text-right text-black shadow-black "
+                >
+                  <a href={`#${dashify(project.title)}`}>{project.title}</a>
+                </h2>
+              </div>
 
-            {/* Image */}
-            <ProjectImage src={project.image} alt={project.alt} />
+              {/* Image */}
+              <ProjectImage src={project.image} alt={project.alt} />
 
-            {/* Description */}
-            <div className="m-6">
-              <p>{project.description}</p>
-            </div>
+              {/* Description */}
+              <div className="m-6">
+                <p>{project.description}</p>
+              </div>
 
-            {/* Links */}
-            <div className="flex justify-center gap-8">
-              <Link
-                className="bg-blue-400 rounded-3xl bg-opacity-75 hover:shadow-lg hover:transform hover:scale-110 transition duration-200"
-                href={project.githubRepo}
-              >
-                {GithubIcon(75, 75)}{" "}
-              </Link>
-              <Link
-                className="bg-blue-400 rounded-3xl bg-opacity-75 hover:shadow-lg hover:transform hover:scale-110 transition duration-200 hover:animate-pulse"
-                href={project.liveLink}
-              >
-                {PlayIcon(75, 75)}
-              </Link>
-            </div>
+              {/* Links */}
+              <div className="flex justify-center gap-8">
+                <Link
+                  className="bg-blue-400 rounded-3xl bg-opacity-75 hover:shadow-lg hover:transform hover:scale-110 transition duration-200"
+                  href={project.githubRepo}
+                >
+                  {GithubIcon(75, 75)}{" "}
+                </Link>
+                <Link
+                  className="bg-blue-400 rounded-3xl bg-opacity-75 hover:shadow-lg hover:transform hover:scale-110 transition duration-200 hover:animate-pulse"
+                  href={project.liveLink}
+                >
+                  {PlayIcon(75, 75)}
+                </Link>
+              </div>
 
-            <TechStack techStack={project.techStack} />
-          </article>
-        );
-      })}
+              <TechStack techStack={project.techStack} />
+            </article>
+          );
+        })}
+      </div>
     </section>
   );
 }

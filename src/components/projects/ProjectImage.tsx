@@ -7,7 +7,7 @@ export default function ProjectImage({
 }) {
   return (
     <>
-      <img className="rounded-md shadow-md" src={src} alt={alt} />
+      <img className="rounded-md shadow-md " src={src} alt={alt} />
     </>
   );
 }
