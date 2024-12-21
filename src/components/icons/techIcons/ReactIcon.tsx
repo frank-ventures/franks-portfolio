@@ -6,13 +6,13 @@ export default function ReactIcon(width?: number, height?: number) {
       viewBox="0 0 50 50"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g fill="none" fill-rule="nonzero">
+      <g fill="none" fillRule="nonzero">
         {/* <rect
           fill="#fff"
           height="71"
           rx="14"
           stroke="#0c6d87"
-          stroke-width="2"
+          strokeWidth="2"
           width="71"
           x="1"
           y="1"

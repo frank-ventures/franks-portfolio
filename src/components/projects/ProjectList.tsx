@@ -3,6 +3,8 @@ import Status from "@/components/projects/Status";
 import TechStack from "@/components/projects/TechStack";
 import Link from "next/link";
 import { dashify } from "@/helpers/dashify";
+import GithubIcon from "../icons/techIcons/GithubIcon";
+import PlayIcon from "../icons/techIcons/PlayIcon";
 
 export default function ProjectsList() {
   const projects = getProjects();
@@ -31,14 +33,14 @@ export default function ProjectsList() {
             </div>
 
             {/* Description */}
-            <div className="my-4">
+            <div className="m-8">
               <p>{project.description}</p>
             </div>
 
             {/* Links */}
             <div className="flex justify-center gap-8">
-              <Link href={project.githubRepo}>Repo</Link>
-              <Link href={project.liveLink}>Site</Link>
+              <Link href={project.githubRepo}>{GithubIcon(50, 50)} </Link>
+              <Link href={project.liveLink}>{PlayIcon(50, 50)}</Link>
             </div>
 
             <TechStack techStack={project.techStack} />

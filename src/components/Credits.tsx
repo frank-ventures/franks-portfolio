@@ -28,6 +28,22 @@ export default function Credits() {
       title: "Tailwind Icon",
       link: "https://commons.wikimedia.org/wiki/File:Tailwind_CSS_Logo.svg",
     },
+    {
+      title: "Supabase Icon",
+      link: "https://supabase.com/brand-assets",
+    },
+    {
+      title: "Clerk Icon",
+      link: "https://clerk.com/design",
+    },
+    {
+      title: "GitHub Icon",
+      link: "https://www.svgrepo.com/svg/512317/github-142",
+    },
+    {
+      title: "Link/Play Icon",
+      link: "https://www.svgrepo.com/svg/436852/play-circle-fill",
+    },
   ];
 
   return (

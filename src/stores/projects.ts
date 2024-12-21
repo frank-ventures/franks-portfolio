@@ -1,8 +1,11 @@
+import APIIcon from "@/components/icons/techIcons/APIIcon";
+import ClerkIcon from "@/components/icons/techIcons/ClerkIcon";
 import CSSIcon from "@/components/icons/techIcons/CSSIcon";
 import HTMLIcon from "@/components/icons/techIcons/HTMLIcon";
 import JavaScriptIcon from "@/components/icons/techIcons/JavaScriptIcon";
 import NextJsIcon from "@/components/icons/techIcons/NextJsIcon";
 import ReactIcon from "@/components/icons/techIcons/ReactIcon";
+import SupabaseIcon from "@/components/icons/techIcons/SupabaseIcon";
 import TailwindIcon from "@/components/icons/techIcons/TailwindIcon";
 import TypeScriptIcon from "@/components/icons/techIcons/TypeScriptIcon";
 import { ReactNode } from "react";
@@ -100,7 +103,7 @@ const techStacks: TechStacks[] = [
     id: 8,
     title: "Supabase",
     colour: "green",
-    icon: (width, height) => TailwindIcon(width, height),
+    icon: (width, height) => SupabaseIcon(width, height),
   },
   {
     id: 9,
@@ -111,14 +114,14 @@ const techStacks: TechStacks[] = [
   {
     id: 10,
     title: "API",
-    colour: "something",
-    icon: (width, height) => TailwindIcon(width, height),
+    colour: "lightpurple",
+    icon: (width, height) => APIIcon(width, height),
   },
   {
     id: 11,
     title: "Clerk",
-    colour: "something",
-    icon: (width, height) => TailwindIcon(width, height),
+    colour: "black",
+    icon: (width, height) => ClerkIcon(width, height),
   },
 ];
 
