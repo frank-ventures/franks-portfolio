@@ -134,7 +134,7 @@ const projects: Project[] = [
     status: 1,
     techStack: [4, 7],
     description:
-      "I wanted to see how much of my income was leftover to put into savings pots, after taxes and expenses. I turned a spreadsheet (YAWN) into this app. It`s colourful, and does the maths for you!",
+      "I wanted to see how much of my income was leftover to put into savings pots, after taxes and expenses. I turned a spreadsheet (YAWN) into this app. It's colourful, and does the maths for you!",
     githubRepo: "https://github.com/frank-ventures/monthly-finances-visualiser",
     liveLink: "https://monthly-financer.onrender.com/",
   },
@@ -145,7 +145,7 @@ const projects: Project[] = [
     status: 2,
     techStack: [5, 7, 8],
     description:
-      "A clone of the board game 'Articulate', but with a mature twist. Be warned, depending on how dark YOU are, the prompts range from 'That`s uncomfortable' to 'Downright nasty'!",
+      "A clone of the board game 'Articulate', but with a mature twist. Be warned, depending on how dark YOU are, the prompts range from 'That's uncomfortable' to 'Downright nasty'!",
     githubRepo: "",
     liveLink: "https://darkticulate.vercel.app/",
   },
