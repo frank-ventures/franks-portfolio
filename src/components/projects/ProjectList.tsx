@@ -11,7 +11,10 @@ export default function ProjectsList() {
   const projects = getProjects();
 
   return (
-    <section className="flex flex-col items-center gap-2 border border-black ">
+    <section
+      id="projects-list"
+      className="flex flex-col items-center gap-2 border border-black "
+    >
       <div className="mt-4 bg-red-600 border-2 border-black p-2 w-10/12 max-w-[600px] rounded-2xl">
         <h2 className="text-3xl text-center text-yellow-300 text-shadow-withOutline shadow-black ">
           Check out my projects
@@ -49,15 +52,20 @@ export default function ProjectsList() {
 
               {/* Links */}
               <div className="flex justify-center gap-10 mb-2">
-                <Link
-                  className="bg-blue-400 rounded-3xl bg-opacity-75 border-b-2 shadow border-blue-800 hover:shadow-lg hover:transform hover:scale-110 transition duration-200 "
-                  href={project.githubRepo}
-                >
-                  {GithubIcon(75, 75)}{" "}
-                </Link>
+                {project.githubRepo && (
+                  <Link
+                    className="bg-blue-400 rounded-3xl bg-opacity-75 border-b-2 shadow border-blue-800 hover:shadow-lg hover:transform hover:scale-110 transition duration-200 "
+                    href={project.githubRepo}
+                    target="blank"
+                  >
+                    {GithubIcon(75, 75)}{" "}
+                  </Link>
+                )}
+
                 <Link
                   className="bg-blue-400 rounded-3xl bg-opacity-75 border-b-2 shadow border-blue-800 hover:shadow-lg hover:transform hover:scale-110 transition duration-200 hover:animate-pulse"
                   href={project.liveLink}
+                  target="blank"
                 >
                   {PlayIcon(75, 75)}
                 </Link>
