@@ -46,10 +46,26 @@ export default function Credits() {
     },
   ];
 
+  const codepenCredits = [
+    {
+      title: "Text Bounce Animation",
+      link: "https://codepen.io/allanrod/pen/rgQQJb",
+    },
+  ];
+
   return (
     <div>
-      <p>Stuff I used</p>
+      <p>Icons I used</p>
       {iconCredits.map((credit, index) => {
+        return (
+          <p key={`credit_${index}`}>
+            {credit.title}: {credit.link}
+          </p>
+        );
+      })}
+
+      <p>CodePens I used</p>
+      {codepenCredits.map((credit, index) => {
         return (
           <p key={`credit_${index}`}>
             {credit.title}: {credit.link}

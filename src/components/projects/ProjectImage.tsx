@@ -7,7 +7,11 @@ export default function ProjectImage({
 }) {
   return (
     <div className="h-[21rem]">
-      <img className="rounded-md shadow-md" src={src} alt={alt} />
+      <img
+        className="rounded-md shadow-md shadow-gray-400"
+        src={src}
+        alt={alt}
+      />
     </div>
   );
 }

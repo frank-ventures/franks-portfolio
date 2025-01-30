@@ -12,3 +12,94 @@
       1px -1px 0 #000;
   }
 }
+
+/* @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap"); */
+:root {
+  --textsize: 25px;
+  --ballwidth: calc(var(--textsize) - 9px);
+  --ballheight: calc(var(--textsize) - 9px);
+  --topbounce: calc(var(--textsize) * 2);
+}
+
+/* body {
+  position: relative;
+  width: auto;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+}
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.text {
+  color: #ff5722;
+  display: inline-block;
+  height: var(--topbounce);
+  line-height: var(--topbounce);
+  font-size: var(--textsize);
+}
+.bounce {
+  position: relative;
+  display: inline-block;
+  height: 36px;
+  width: var(--ballwidth);
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    width: var(--ballwidth);
+    height: var(--ballheight);
+    border-radius: 50%;
+    border: 2px solid #ff5722;
+    background-color: #ffffff00;
+    animation: bounce 0.75s alternate infinite ease;
+    transition: all 300ms ease-out;
+  }
+}
+
+.text:hover .bounce {
+  &:before {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 70px 70px 20px 20px;
+    transform: scaleX(1.2);
+  }
+  35% {
+    height: var(--ballheight);
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+nav a::before {
+  animation: slide 1.5s alternate infinite ease;
+  transition: all 150ms ease-in;
+}
+
+nav a:hover::before {
+  animation: none;
+}
+
+@keyframes slide {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+    left: 10px;
+  }
+}

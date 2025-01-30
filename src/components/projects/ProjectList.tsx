@@ -21,7 +21,7 @@ export default function ProjectsList() {
         </h2>
       </div>
 
-      {/* TODO: Fix issue where cards are different widths. It's probs to do with images */}
+      {/* Project List */}
       <div className="flex max-w-full flex-wrap justify-center">
         {projects.map((project, index) => {
           return (
@@ -71,6 +71,7 @@ export default function ProjectsList() {
                 </Link>
               </div>
 
+              {/* Icons for tech used */}
               <TechStack techStack={project.techStack} />
             </article>
           );
