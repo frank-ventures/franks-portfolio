@@ -27,7 +27,7 @@ export default function ProjectsList() {
           return (
             <article
               key={`project_${index}`}
-              className="flex flex-col gap-2 justify-between p-4 m-2 border-2 border-black rounded-md bg-purple-200 bg-opacity-50 w-[500px] max-w-[500px]"
+              className="flex flex-col gap-2 justify-between p-4 m-2 border-2 border-black rounded-md bg-purple-200 bg-opacity-50  max-w-[500px]"
             >
               {/* Status and Title */}
               <div className="flex justify-between gap-5 last:m-10 min-h-20">
@@ -46,7 +46,7 @@ export default function ProjectsList() {
               <ProjectImage src={project.image} alt={project.alt} />
 
               {/* Description */}
-              <div className="m-6 h-[8rem]">
+              <div className="m-6 sm:h-[8rem]">
                 <p>{project.description}</p>
               </div>
 

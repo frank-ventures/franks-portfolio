@@ -2,7 +2,7 @@ import NavBar from "./Navbar";
 
 export default function Header() {
   return (
-    <header className="bg-slate-800 text-lg text-gray-800 hover:text-gray-200 px-4 w-full flex justify-between items-center fixed top-0 shadow-md hover:shadow-lg shadow-black hover:shadow-black bg-opacity-20 hover:bg-opacity-50 backdrop-blur-md h-8 hover:h-14 transition-all duration-500">
+    <header className="bg-slate-800 sm:text-lg text-gray-800 hover:text-gray-200 px-4 w-full flex justify-between items-center fixed top-0 shadow-md hover:shadow-lg shadow-black hover:shadow-black bg-opacity-20 hover:bg-opacity-50 backdrop-blur-md h-8 hover:h-14 transition-all duration-500">
       <p className="text">
         Franks P<span className="bounce"></span>rtfoli
         <span className="bounce"></span>

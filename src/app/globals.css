@@ -13,7 +13,6 @@
   }
 }
 
-/* @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap"); */
 :root {
   --textsize: 25px;
   --ballwidth: calc(var(--textsize) - 9px);
@@ -21,27 +20,15 @@
   --topbounce: calc(var(--textsize) * 2);
 }
 
-/* body {
-  position: relative;
-  width: auto;
-  height: 100vh;
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 2px;
-}
-.wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
+/* Bouncing "O" in Navbar */
 .text {
   color: #ff5722;
   display: inline-block;
   height: var(--topbounce);
   line-height: var(--topbounce);
-  font-size: var(--textsize);
+  font-size: 15px;
 }
+
 .bounce {
   position: relative;
   display: inline-block;
@@ -52,13 +39,29 @@
     position: absolute;
     display: block;
     top: 0;
-    width: var(--ballwidth);
-    height: var(--ballheight);
+    left: 2px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    border: 2px solid #ff5722;
+    border: 1px solid #ff5722;
     background-color: #ffffff00;
     animation: bounce 0.75s alternate infinite ease;
     transition: all 300ms ease-out;
+  }
+}
+
+@media (min-width: 640px) {
+  .text {
+    font-size: var(--textsize);
+  }
+
+  .bounce {
+    &:before {
+      width: var(--ballwidth);
+      height: var(--ballheight);
+      left: 0;
+      border-width: 2px;
+    }
   }
 }
 
