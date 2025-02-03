@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        spideyFont: "var(--font-spidey)",
+        amazing: "var(--font-amazing)",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

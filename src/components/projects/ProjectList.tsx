@@ -11,15 +11,15 @@ export default function ProjectsList() {
   const projects = getProjects();
 
   return (
-    <section
+    <article
       id="projects-list"
-      className="flex flex-col items-center gap-2 border border-black "
+      className="flex flex-col items-center gap-2 border border-black pt-16"
     >
-      <div className="mt-4 bg-red-600 border-2 border-black p-2 w-10/12 max-w-[600px] rounded-2xl">
+      <section className="mt-4 bg-red-600 border-2 border-black p-2 w-10/12 max-w-[600px] rounded-2xl">
         <h2 className="text-3xl text-center text-yellow-300 text-shadow-withOutline shadow-black ">
           Check out my projects
         </h2>
-      </div>
+      </section>
 
       {/* Project List */}
       <div className="flex max-w-full flex-wrap justify-center">
@@ -77,6 +77,6 @@ export default function ProjectsList() {
           );
         })}
       </div>
-    </section>
+    </article>
   );
 }

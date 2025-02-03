@@ -53,6 +53,21 @@ export default function Credits() {
     },
   ];
 
+  const otherCredits = [
+    {
+      title: "90s Spider-Man font, for 'Frankie' text",
+      link: "https://www.dafont.com/the-amazing-spider-man.font",
+    },
+    {
+      title: "How to do a text curve with SVGs",
+      link: "https://www.shecodes.io/athena/316836-how-to-make-text-curve-like-a-smile-using-css",
+    },
+    {
+      title: "And an SVG Path Visualiser",
+      link: "https://svg-path-visualizer.netlify.app/",
+    },
+  ];
+
   return (
     <div>
       <p>Icons I used</p>
@@ -66,6 +81,15 @@ export default function Credits() {
 
       <p>CodePens I used</p>
       {codepenCredits.map((credit, index) => {
+        return (
+          <p key={`credit_${index}`}>
+            {credit.title}: {credit.link}
+          </p>
+        );
+      })}
+
+      <p>Other stuff I used</p>
+      {otherCredits.map((credit, index) => {
         return (
           <p key={`credit_${index}`}>
             {credit.title}: {credit.link}

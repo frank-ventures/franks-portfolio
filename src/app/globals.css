@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .font-spidey {
+    font-family: var(--font-spidey);
+
+    @apply tracking-wide;
+  }
+  .font-amazing {
+    font-family: var(--font-amazing);
+
+    @apply tracking-wide;
+  }
+}
+
 @layer utilities {
   .text-outline-with-shadow {
     text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000,
