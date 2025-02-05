@@ -20,7 +20,7 @@ export default function Home() {
         text={
           <>
             <p className="flex flex-col items-center">
-              Hello! I&apos;m{" "}
+              Who am I? I&apos;m{" "}
               <span className="font-amazing tracking-widest">
                 <svg width="200" height="100">
                   <path id="curve" d="M 15,65 Q 100,130 190,50" fill="none" />

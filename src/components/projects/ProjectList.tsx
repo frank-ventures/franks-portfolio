@@ -13,7 +13,7 @@ export default function ProjectsList() {
   return (
     <article
       id="projects-list"
-      className="flex flex-col items-center gap-2 border border-black pt-16"
+      className="flex flex-col items-center gap-2 border border-black py-20"
     >
       <section className="mt-4 bg-red-600 border-2 border-black p-2 w-10/12 max-w-[600px] rounded-2xl">
         <h2 className="text-3xl text-center text-yellow-300 text-shadow-withOutline shadow-black ">
@@ -27,7 +27,7 @@ export default function ProjectsList() {
           return (
             <article
               key={`project_${index}`}
-              className="flex flex-col gap-2 justify-between p-4 m-2 border-2 border-black rounded-md bg-purple-200 bg-opacity-50  max-w-[500px]"
+              className="flex flex-col gap-2 justify-between p-4 m-2 border-2 border-black rounded-md bg-blue-400  max-w-[500px]"
             >
               {/* Status and Title */}
               <div className="flex justify-between gap-5 last:m-10 min-h-20">
@@ -36,7 +36,7 @@ export default function ProjectsList() {
                 {/* TODO: Give this heading some kind of fancyness */}
                 <h2
                   id={`${dashify(project.title)}`}
-                  className="text-3xl text-right text-black shadow-black "
+                  className="text-3xl text-right"
                 >
                   <a href={`#${dashify(project.title)}`}>{project.title}</a>
                 </h2>
@@ -54,21 +54,22 @@ export default function ProjectsList() {
               <div className="flex justify-center gap-10 mb-2">
                 {project.githubRepo && (
                   <Link
-                    className="bg-blue-400 rounded-3xl bg-opacity-75 border-b-2 shadow border-blue-800 hover:shadow-lg hover:transform hover:scale-110 transition duration-200 "
+                    className="bg-red-400 rounded-3xl border-b-2 shadow border-red-800 hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200 "
                     href={project.githubRepo}
                     target="blank"
                   >
-                    {GithubIcon(75, 75)}{" "}
+                    {GithubIcon(75, 75)}
                   </Link>
                 )}
-
-                <Link
-                  className="bg-blue-400 rounded-3xl bg-opacity-75 border-b-2 shadow border-blue-800 hover:shadow-lg hover:transform hover:scale-110 transition duration-200 hover:animate-pulse"
-                  href={project.liveLink}
-                  target="blank"
-                >
-                  {PlayIcon(75, 75)}
-                </Link>
+                {project.liveLink && (
+                  <Link
+                    className="bg-red-400 rounded-3xl border-b-2 shadow border-red-800 hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200"
+                    href={project.liveLink}
+                    target="blank"
+                  >
+                    {PlayIcon(75, 75)}
+                  </Link>
+                )}
               </div>
 
               {/* Icons for tech used */}

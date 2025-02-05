@@ -1,19 +1,14 @@
 import localFont from "next/font/local";
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
-// import Header from "@/components/header/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const raleway = Raleway({
+  variable: "--font-mont",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 const spideyFont = localFont({
@@ -39,9 +34,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spideyFont.variable} ${amazing.variable} antialiased w-dvw`}
+        className={`${raleway.className} ${spideyFont.variable} ${amazing.variable} antialiased w-dvw`}
       >
         <Header />
 

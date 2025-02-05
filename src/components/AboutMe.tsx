@@ -12,11 +12,11 @@ function MeSection({
   text: ReactNode;
 }) {
   return (
-    <section className="flex flex-col sm:flex-row gap-4 items-center w-[80%]">
+    <section className="flex flex-col sm:flex-row gap-4 items-center w-[80%] sm:even:flex-row-reverse">
       <img
         src={imageSrc}
         alt={imageAlt}
-        className="object-cover h-[20rem] w-full object-[0_10%]"
+        className="object-cover h-[20rem] w-full max-w-[20rem] object-[0_10%] rounded-xl"
       />
       <p>{text}</p>
     </section>
@@ -27,7 +27,7 @@ export default function AboutMe() {
   return (
     <article
       id="about-me"
-      className="pt-20 px-4 flex flex-col items-center gap-16 w-full"
+      className="py-20 px-4 flex flex-col items-center gap-16 w-full"
     >
       <MeSection
         imageSrc="./frankie/frankie-manchester.jpg"
@@ -55,13 +55,13 @@ export default function AboutMe() {
       />
 
       <MeSection
-        imageSrc="./frankie/frankie-manchester.jpg"
-        imageAlt="Greyscale image of Frankie smiling in Manchester"
-        text=" Before this I did a bunch of other stuff, from gardening, to outdoor
+        imageSrc="./work/ncc-adventure.jpg"
+        imageAlt="Frankie smiling in front of a building called 'Colwick Park Adventure Centre' with his team mates"
+        text="Before this I did a bunch of other stuff, from gardening, to outdoor
         adventure instructing, to working in America."
       />
-
-      <MeSection
+      {/* TODO: an about page, then uncomment this and link to it */}
+      {/* <MeSection
         imageSrc="./frankie/frankie-manchester.jpg"
         imageAlt="Greyscale image of Frankie smiling in Manchester"
         text={
@@ -76,7 +76,7 @@ export default function AboutMe() {
             </span>
           </>
         }
-      />
+      /> */}
     </article>
   );
 }
