@@ -15,7 +15,7 @@ const pageAnchors = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center bg-slate-200">
+    <main className="flex flex-col w-full items-center bg-slate-200">
       <IntroBar
         text={
           <>

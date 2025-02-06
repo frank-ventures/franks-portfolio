@@ -48,8 +48,8 @@ export default function AboutMe() {
               Tech Educators
             </a>
             ; a pretty cool company that delivers bootcamps with the aim of
-            developing peoples skills & confidence in the tech. It&apos;s a good
-            fun time!
+            developing peoples&apos; skills & confidence in the tech. It&apos;s
+            a good fun time!
           </>
         }
       />

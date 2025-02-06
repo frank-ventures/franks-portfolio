@@ -4,7 +4,7 @@ export default function SpiderCorner() {
       version="1.1"
       id="Icons"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32.00 32.00"
+      viewBox="-2.75 2.75 32.00 32.00"
       fill="#000000"
       transform="matrix(-1, 0, 0, -1, 0, 0)rotate(0)"
     >
