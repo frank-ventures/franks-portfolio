@@ -44,6 +44,14 @@ export default function Credits() {
       title: "Link/Play Icon",
       link: "https://www.svgrepo.com/svg/436852/play-circle-fill",
     },
+    {
+      title: "Spider Web Corner SVG",
+      link: "https://thenounproject.com/browse/icons/term/spider-web-corner/",
+    },
+    {
+      title: "Three Dot More Icon",
+      link: "https://www.flaticon.com/free-icon/more_1477110?term=three+dots&page=1&position=19&origin=tag&related_id=1477110",
+    },
   ];
 
   const codepenCredits = [

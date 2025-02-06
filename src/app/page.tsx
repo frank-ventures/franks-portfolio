@@ -1,17 +1,71 @@
-import AboutMe from "@/components/AboutMe";
+import ContentDisplay from "@/components/ContentDisplay";
 import IntroBar from "@/components/header/IntroBar";
 import ProjectsList from "@/components/projects/ProjectList";
+import QuickLinks from "@/components/QuickLinks";
 
 const pageAnchors = [
   {
-    href: "about-me",
+    href: "#about-me",
     text: "Me!",
   },
   {
-    href: "projects-list",
+    href: "#projects-list",
     text: "Projects",
   },
 ];
+
+const homePageContent = [
+  {
+    imageSrc: "./frankie/frankie-manchester.jpg",
+    imageAlt: "Greyscale image of Frankie smiling in Manchester",
+    text: "As you'll have guessed by now, I am Frankie!",
+  },
+  {
+    imageSrc: "./work/tech-ed-logo.png",
+    imageAlt: "The purple, sand and green logo of the company Tech Educators",
+    text: (
+      <>
+        Currently I work at{" "}
+        <a
+          className="text-orange-600 hover:underline"
+          href="https://techeducators.co.uk/"
+        >
+          Tech Educators
+        </a>
+        ; a pretty cool company that delivers bootcamps with the aim of
+        developing peoples&apos; skills & confidence in the tech. It&apos;s a
+        good fun time!
+      </>
+    ),
+  },
+  {
+    imageSrc: "./work/ncc-adventure-2.jpg",
+    imageAlt:
+      "Frankie smiling in front of a building called 'Colwick Park Adventure Centre' with his team mates",
+    text: "Before this I did a bunch of other stuff, from gardening, to outdoor adventure instructing, to working in America.",
+  },
+];
+{
+  /* TODO: an about page, then uncomment this and link to it */
+}
+{
+  /* <MeSection
+        imageSrc="./frankie/frankie-manchester.jpg"
+        imageAlt="Greyscale image of Frankie smiling in Manchester"
+        text={
+          <>
+            But you can read more about all that{" "}
+            <a className="text-orange-600 hover:underline" href="#">
+              here
+            </a>{" "}
+            <span className="italic">
+              (and more, like how I think bicycles are utterly and magically
+              awesome)
+            </span>
+          </>
+        }
+      /> */
+}
 
 export default function Home() {
   return (
@@ -37,24 +91,11 @@ export default function Home() {
       />
 
       {/* Quick Links */}
-      <nav className="border-t border-b border-black flex gap-4 w-full px-4 py-2 shadow shadow-black sticky top-8 bg-slate-200 bg-opacity-50 backdrop-blur">
-        <p className="text-gray-600">Jump to: </p>
-        {pageAnchors.map((link, index) => {
-          return (
-            <a
-              className="relative before:content-[''] before:w-2 before:h-[2px] before:bg-gray-700 before:top-[24px]  before:absolute hover:before:w-full hover:before:bg-orange-600 hover:before:left-0 before:transition-all before:duration-500 "
-              key={`anchor_${index}`}
-              href={`#${link.href}`}
-            >
-              {link.text}
-            </a>
-          );
-        })}
-      </nav>
+      <QuickLinks pageAnchors={pageAnchors} />
 
       {/* About Me */}
 
-      <AboutMe />
+      <ContentDisplay content={homePageContent} id="about-me" />
 
       {/* Work related */}
 
