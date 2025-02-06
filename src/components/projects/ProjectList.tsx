@@ -46,7 +46,7 @@ export default function ProjectsList() {
               <ProjectImage src={project.image} alt={project.alt} />
 
               {/* Description */}
-              <div className="m-6 sm:h-[8rem]">
+              <div className="m-6 sm:h-[9rem] p-2 bg-blue-300 bg-opacity-40 rounded-xl shadow-inner shadow-slate-400">
                 <p>{project.description}</p>
               </div>
 

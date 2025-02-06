@@ -16,7 +16,7 @@ function MeSection({
       <img
         src={imageSrc}
         alt={imageAlt}
-        className="object-cover h-[20rem] w-full max-w-[20rem] object-[0_10%] rounded-xl"
+        className="object-cover h-[20rem] w-full max-w-[20rem] object-[30%_10%] rounded-xl"
       />
       <p>{text}</p>
     </section>
@@ -55,7 +55,7 @@ export default function AboutMe() {
       />
 
       <MeSection
-        imageSrc="./work/ncc-adventure.jpg"
+        imageSrc="./work/ncc-adventure-2.jpg"
         imageAlt="Frankie smiling in front of a building called 'Colwick Park Adventure Centre' with his team mates"
         text="Before this I did a bunch of other stuff, from gardening, to outdoor
         adventure instructing, to working in America."
