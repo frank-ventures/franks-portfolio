@@ -13,16 +13,16 @@ export default function ProjectsList() {
   return (
     <article
       id="projects-list"
-      className="flex flex-col items-center gap-2 border border-black py-20"
+      className="flex flex-col items-center gap-2 border-t-2 border-b-2 border-black py-20"
     >
-      <section className="mt-4 bg-red-600 border-2 border-black p-2 w-10/12 max-w-[600px] rounded-2xl">
+      <div className="mt-4 bg-red-600 border-2 border-black p-2 w-10/12 max-w-[600px] rounded-2xl">
         <h2 className="text-3xl text-center text-yellow-300 text-shadow-withOutline shadow-black ">
           Check out my projects
         </h2>
-      </section>
+      </div>
 
       {/* Project List */}
-      <div className="flex max-w-full flex-wrap justify-center">
+      <section className="flex max-w-full flex-wrap justify-center">
         {projects.map((project, index) => {
           return (
             <article
@@ -77,7 +77,7 @@ export default function ProjectsList() {
             </article>
           );
         })}
-      </div>
+      </section>
     </article>
   );
 }

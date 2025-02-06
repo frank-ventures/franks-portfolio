@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* --- --- --- --- */
+/* Allowing Spider-man fonts to be used! */
 @layer base {
   .font-spidey {
     font-family: var(--font-spidey);
@@ -15,6 +17,8 @@
   }
 }
 
+/* --- --- --- --- */
+/* Custom Tailwind classes for text shadows */
 @layer utilities {
   .text-outline-with-shadow {
     text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000,
@@ -33,6 +37,7 @@
   --topbounce: calc(var(--textsize) * 2);
 }
 
+/* --- --- --- --- */
 /* Bouncing "O" in Navbar */
 .text {
   color: #ff5722;
@@ -101,6 +106,8 @@
   }
 }
 
+/* --- --- --- --- */
+/* Nav bar links having sliding underlines */
 nav a::before {
   animation: slide 1.5s alternate infinite ease;
   transition: all 150ms ease-in;
@@ -118,4 +125,13 @@ nav a:hover::before {
   100% {
     left: 10px;
   }
+}
+
+.st0 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 0.6719999999999999;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
 }
