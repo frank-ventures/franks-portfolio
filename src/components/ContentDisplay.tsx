@@ -16,15 +16,12 @@ export default function ContentDisplay({
   id: string;
 }) {
   return (
-    <article
-      id={id}
-      className="py-20 px-4 flex flex-col items-center gap-16 w-full"
-    >
+    <article id={id} className="py-20 flex flex-col items-center  w-screen">
       {content.map((thisSection, index) => {
         return (
           <section
             key={`thisSection_${index}`}
-            className="flex flex-col sm:flex-row gap-4 items-center w-[80%] sm:even:flex-row-reverse"
+            className="flex flex-col p-4 w-full sm:flex-row gap-4 items-center  sm:even:flex-row-reverse odd:bg-slate-300"
           >
             <img
               src={thisSection.imageSrc}

@@ -31,19 +31,26 @@ export default function QuickLinks({
   return (
     <nav className="border-t border-b border-black flex flex-row-reverse justify-between gap-4 w-full px-4 py-2 shadow shadow-black sticky top-8 bg-slate-200 bg-opacity-50 backdrop-blur">
       {/* Three Dot Icon to show there's more items to see */}
-      <img
-        onClick={() => setIsOpen(!isOpen)}
-        src="./more.png"
-        className={`${
-          isOpen ? "rotate-90 " : "animate-pulse"
-        } transition-all h-6 w-6 hover:cursor-pointer z-50`}
-      />
+      <div className="flex gap-2">
+        <p
+          className={`${isOpen && `-translate-x-40 opacity-0`} transition-all`}
+        >
+          More
+        </p>
+        <img
+          onClick={() => setIsOpen(!isOpen)}
+          src="./more.png"
+          className={`${
+            isOpen ? "rotate-90 " : "animate-pulse"
+          } transition-all h-6 w-6 hover:cursor-pointer z-50`}
+        />
+      </div>
 
       {/* A wrapper to simplify what gets a transition effect applied to it. */}
       <div
         className={` ${
           isOpen ? "opacity-100" : "opacity-0 translate-x-96"
-        } flex gap-2 transition-all duration-500`}
+        } flex gap-2 transition-all duration-100 sm:duration-500`}
       >
         <p className={` text-gray-600`}>Jump to:</p>
 
