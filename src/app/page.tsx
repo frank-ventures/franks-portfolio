@@ -24,18 +24,22 @@ const homePageContent = [
     imageSrc: "./work/tech-ed-logo.png",
     imageAlt: "The purple, sand and green logo of the company Tech Educators",
     text: (
-      <>
-        Currently I work at{" "}
+      <p>
+        Currently I work as an{" "}
+        <span className="text-purple-800 hover:text-green-400 p-1 font-bold bg-green-400 hover:bg-purple-800 rounded-md transition-all">
+          Instructor
+        </span>{" "}
+        at{" "}
         <a
           className="text-orange-600 hover:underline"
           href="https://techeducators.co.uk/"
         >
           Tech Educators
         </a>
-        ; a pretty cool company that delivers bootcamps with the aim of
+        ; a pretty cool company that delivers bootcamps, with the aim of
         developing peoples&apos; skills & confidence in the tech. It&apos;s a
         good fun time!
-      </>
+      </p>
     ),
   },
   {

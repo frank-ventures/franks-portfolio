@@ -3,8 +3,8 @@
 import { ReactNode } from "react";
 
 interface Content {
-  imageSrc: string;
-  imageAlt: string;
+  imageSrc?: string;
+  imageAlt?: string;
   text: ReactNode;
 }
 
@@ -23,12 +23,22 @@ export default function ContentDisplay({
             key={`thisSection_${index}`}
             className="flex flex-col p-4 w-full sm:flex-row gap-4 items-center  sm:even:flex-row-reverse odd:bg-slate-300"
           >
-            <img
-              src={thisSection.imageSrc}
-              alt={thisSection.imageAlt}
-              className="object-cover h-[20rem] w-full max-w-[20rem] object-[30%_10%] rounded-xl"
-            />
-            <p>{thisSection.text}</p>
+            {/* Images are optional for these sections */}
+            {thisSection.imageSrc && (
+              <img
+                src={thisSection.imageSrc}
+                alt={thisSection.imageAlt}
+                className="object-cover h-[20rem] w-full max-w-[20rem] object-[30%_10%] rounded-xl"
+              />
+            )}
+
+            {/* Text content can be a plain string or can be a chunk of HTML. */}
+            {/* If its not a string, then it'll render what's passed in. */}
+            {typeof thisSection.text == "object" ? (
+              thisSection.text
+            ) : (
+              <p>{thisSection.text}</p>
+            )}
           </section>
         );
       })}
