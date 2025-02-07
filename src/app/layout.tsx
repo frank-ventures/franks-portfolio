@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth m-0 p-0">
       <body
-        className={`${raleway.className} ${spideyFont.variable} ${amazing.variable} antialiased w-dvw h-full m-0 p-0 box-border`}
+        className={`${raleway.className} ${spideyFont.variable} ${amazing.variable} antialiased h-full m-0 p-0 box-border`}
       >
         <Header />
 

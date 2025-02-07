@@ -35,7 +35,7 @@ export default function QuickLinks({
         onClick={() => setIsOpen(!isOpen)}
         src="./more.png"
         className={`${
-          isOpen ? "rotate-90 " : ""
+          isOpen ? "rotate-90 " : "animate-pulse"
         } transition-all h-6 w-6 hover:cursor-pointer z-50`}
       />
 
