@@ -2,10 +2,10 @@ import { getProjects } from "@/stores/projects";
 import Status from "@/components/projects/Status";
 import TechStack from "@/components/projects/TechStack";
 import Link from "next/link";
-import { dashify } from "@/helpers/dashify";
 import GithubIcon from "../icons/techIcons/GithubIcon";
 import PlayIcon from "../icons/techIcons/PlayIcon";
 import ProjectImage from "./ProjectImage";
+import ProjectTitle from "./ProjectTitle";
 
 export default function ProjectsList() {
   const projects = getProjects();
@@ -49,19 +49,14 @@ export default function ProjectsList() {
           return (
             <article
               key={`project_${index}`}
-              className="threed-effect flex flex-col gap-2 justify-between p-4 m-2 border-2 border-black rounded-md bg-blue-400  max-w-[500px]"
+              className="flex flex-col gap-2 justify-between p-4 m-2 border-2 border-black rounded-md bg-blue-400  max-w-[500px]"
             >
               {/* Status and Title */}
               <div className="flex justify-between gap-5 last:m-10 min-h-20">
                 <Status status={project.status} />
 
                 {/* TODO: Give this heading some kind of fancyness */}
-                <h2
-                  id={`${dashify(project.title)}`}
-                  className="text-3xl text-right"
-                >
-                  <a href={`#${dashify(project.title)}`}>{project.title}</a>
-                </h2>
+                <ProjectTitle title={project.title} />
               </div>
 
               {/* Image */}

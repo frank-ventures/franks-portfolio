@@ -29,7 +29,7 @@ export default function QuickLinks({
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <nav className="border-t border-b border-black flex flex-row-reverse justify-between gap-4 w-full px-4 py-2 shadow shadow-black sticky top-8 bg-slate-200 bg-opacity-50 backdrop-blur">
+    <nav className="border-t border-b border-black flex flex-row-reverse justify-between gap-4 w-full px-4 py-2 shadow shadow-black sticky top-8 bg-slate-200 bg-opacity-50 backdrop-blur z-10">
       {/* Three Dot Icon to show there's more items to see */}
       <div className="flex gap-2">
         <p

@@ -139,9 +139,9 @@ nav a:hover::before {
 /* Potential foray into a 3D hover thing */
 /* https://dev.to/webdiscus/3d-parallax-effect-by-moving-mouse-using-htmlcss-7b2 */
 /* https://www.aktek.io/en/about-us */
-/* .threed-effect {
-  transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
+/* Potentially useful: https://github.com/codegenixdev/3d-parallax-tutorial */
+.threed-effect {
   transform-style: preserve-3d;
   transition: transform 1.5s cubic-bezier(0.05, 0.5, 0, 1);
   will-change: transform;
-} */
+}
