@@ -1,12 +1,21 @@
 import convertCharacters from "@/helpers/convertCharacters";
 import Link from "next/link";
 
+interface Post {
+  ID: number;
+  date: string;
+  title: string;
+  excerpt: string;
+  slug: string;
+  featured_image: string;
+}
+
 export default async function BlogPage() {
   const response = await fetch(
     "https://public-api.wordpress.com/rest/v1.1/sites/frankieshrieves.home.blog/posts/?number=100&context=display&fields=title,date,featured_image,excerpt,ID,slug"
   );
-  const posts = await response.json();
-  console.log(posts.posts[0]);
+  const postResponse = await response.json();
+  const posts = await postResponse.posts;
 
   function formatDate(date: string): string {
     const newDate = new Date(date);
@@ -23,7 +32,7 @@ export default async function BlogPage() {
       <h1 className="mt-10">this is just a tribute</h1>
       <h2>Franks Nuggets</h2>
       <section className="flex flex-col gap-4">
-        {posts.posts.map((post) => {
+        {posts.map((post: Post) => {
           return (
             <article
               className="wp_teaser p-4 flex flex-col gap-2"

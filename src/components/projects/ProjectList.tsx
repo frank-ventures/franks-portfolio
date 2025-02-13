@@ -10,6 +10,28 @@ import ProjectImage from "./ProjectImage";
 export default function ProjectsList() {
   const projects = getProjects();
 
+  //  Potential foray into a 3D hover thing
+  // https://dev.to/webdiscus/3d-parallax-effect-by-moving-mouse-using-htmlcss-7b2
+  // https://www.aktek.io/en/about-us
+  // const [rotateX, setRotateX] = useState(0);
+  // const [rotateY, setRotateY] = useState(0);
+
+  // onMouseMove={(event) => {
+  //   const thisElement = event.target;
+  //   console.log(thisElement.style);
+
+  //   const smoothMove = 0.1;
+  //   setRotateX(
+  //     (event.clientY - window.innerHeight / 2) * smoothMove
+  //   );
+  //   setRotateY(
+  //     ((event.clientX - window.innerWidth / 2) * -smoothMove) / 2
+  //   );
+
+  //   thisElement.style.setProperty("--rotate-x", `${rotateX}deg`);
+  //   thisElement.style.setProperty("--rotate-y", `${rotateY}deg`);
+  // }}
+
   return (
     <article
       id="projects-list"
@@ -22,12 +44,12 @@ export default function ProjectsList() {
       </div>
 
       {/* Project List */}
-      <section className="flex max-w-full flex-wrap justify-center">
+      <section className={`flex max-w-full flex-wrap justify-center `}>
         {projects.map((project, index) => {
           return (
             <article
               key={`project_${index}`}
-              className="flex flex-col gap-2 justify-between p-4 m-2 border-2 border-black rounded-md bg-blue-400  max-w-[500px]"
+              className="threed-effect flex flex-col gap-2 justify-between p-4 m-2 border-2 border-black rounded-md bg-blue-400  max-w-[500px]"
             >
               {/* Status and Title */}
               <div className="flex justify-between gap-5 last:m-10 min-h-20">
