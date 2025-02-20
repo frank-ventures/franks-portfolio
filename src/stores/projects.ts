@@ -136,7 +136,7 @@ const projects: Project[] = [
     description:
       "I wanted to see how much of my income was leftover to put into savings pots, after taxes and expenses. I turned a spreadsheet (YAWN) into this app. It's colourful, and does the maths for you!",
     githubRepo: "https://github.com/frank-ventures/monthly-finances-visualiser",
-    liveLink: "https://monthly-financer.onrender.com/",
+    liveLink: "http://finances.frankieshrieves.co.uk",
   },
   {
     title: "DarkTiculate",
@@ -147,7 +147,7 @@ const projects: Project[] = [
     description:
       "A clone of the board game 'Articulate', but with a mature twist. Be warned, depending on how dark YOU are, the prompts range from 'That's uncomfortable' to 'Downright nasty'!",
     githubRepo: "",
-    liveLink: "https://darkticulate.vercel.app/",
+    liveLink: "https://darkticulate.frankieshrieves.co.uk",
   },
   {
     title: "Stoic Quoter",
@@ -157,7 +157,7 @@ const projects: Project[] = [
     techStack: [5, 7, 10],
     description: "A simple, minimal app which lets you see a Stoic quote.",
     githubRepo: "https://github.com/frank-ventures/stoic-quoter",
-    liveLink: "https://stoic-quoter.vercel.app/",
+    liveLink: "https://stoic.frankieshrieves.co.uk",
   },
   {
     title: "Gamelog",
@@ -168,7 +168,7 @@ const projects: Project[] = [
     description:
       "Inspired by the likes of Backloggd and other 'game tracker' apps, I put together this app which lets you make an account, query the IGDB, and add diary logs to your favourited games. I wanted to keep my new skills sharp after the bootcamp, so started this.",
     githubRepo: "https://github.com/frank-ventures/GameLog",
-    liveLink: "https://gamelog-diary.vercel.app/",
+    liveLink: "https://gamelog.frankieshrieves.co.uk",
   },
   {
     title: "'Ainsley Harriot'-themed Clicker Game",
@@ -179,7 +179,7 @@ const projects: Project[] = [
     description:
       "'Ready, Steady, Click!' - The project halfway through the bootcamp was to create a 'cookie clicker' style app, in React. Knowing that Tech Educators have a soft spot for ol' Ainsley, I themed mine with sound effect and image assets.",
     githubRepo: "https://github.com/frank-ventures/teched-week06-project",
-    liveLink: "https://ainsley-clicksiott-ready-steady-click.vercel.app/",
+    liveLink: "https://ainsley.frankieshrieves.co.uk",
   },
   {
     title: "Unsplash Gallery Search App",
@@ -190,7 +190,7 @@ const projects: Project[] = [
     description:
       "On the bootcamp, we were tasked with creating an image gallery viewer, pulling together our newly practiced HTML, CSS and JavaScript skills. I took it a step further by integrating the Unsplash API, plus features like search, a quality toggle and pagination!",
     githubRepo: "https://github.com/frank-ventures/teched-week03-project",
-    liveLink: "https://frank-ventures.github.io/teched-week03-project/",
+    liveLink: "https://gallery.frankieshrieves.co.uk",
   },
   {
     title: "This Portfolio Website!",

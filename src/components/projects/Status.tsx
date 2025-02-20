@@ -18,7 +18,7 @@ export default function Status({ status }: { status: number }) {
 
   return (
     <p
-      className={`capitalize max-w-fit rounded-md shadow-sm px-2 py-1 text-center max-h-fit ${colours[matchedColour]}`}
+      className={`capitalize max-w-fit rounded-md shadow-sm px-2 py-1 text-center max-h-fit h-[-moz-max-content] ${colours[matchedColour]}`}
     >
       {matchedStatus?.title}
     </p>
