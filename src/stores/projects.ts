@@ -171,6 +171,17 @@ const projects: Project[] = [
     liveLink: "https://gamelog.frankieshrieves.co.uk",
   },
   {
+    title: "Quote Lasso",
+    image: "/projects/quote-lasso.png",
+    alt: "Screenshot of an app which lets you search for quotes from the TV show 'Ted Lasso'.",
+    status: 2,
+    techStack: [5, 7, 10],
+    description:
+      "I had such a great time watching Ted Lasso that I started to build this, a quote site for the show. Currently, any ol' soul can add quotes qilly nilly, but sometime I'd like to bring in authentication, and a Lasso API where anyone can request quotes!",
+    githubRepo: "https://github.com/frank-ventures/teched-week08-project",
+    liveLink: "https://lasso.frankieshrieves.co.uk",
+  },
+  {
     title: "'Ainsley Harriot'-themed Clicker Game",
     image: "/projects/ainsley-clicker.png",
     alt: "Screenshot of a game themed on the celebrity 'Ainsley Harriot'. The image shows a counter and his face in a cartoon style.",

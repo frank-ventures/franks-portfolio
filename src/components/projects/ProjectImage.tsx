@@ -40,9 +40,9 @@ export default function ProjectImage({
   }
 
   return (
-    <div className="sm:h-[21rem">
+    <div className="sm:h-[21rem]">
       <img
-        className="rounded-md shadow-lg threed-effect"
+        className="rounded-md shadow-lg threed-effect border border-slate-600"
         src={src}
         alt={alt}
         onMouseMove={(event: React.MouseEvent<HTMLElement>) =>
