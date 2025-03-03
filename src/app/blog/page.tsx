@@ -1,38 +1,58 @@
-import convertCharacters from "@/helpers/convertCharacters";
+import BlogPostExcerpt from "@/components/blog/BlogPostExcerpt";
+import IntroBar from "@/components/header/IntroBar";
 import Link from "next/link";
 
-interface Post {
+interface Category {
   ID: number;
-  date: string;
-  title: string;
-  excerpt: string;
+  name: string;
   slug: string;
-  featured_image: string;
+  description: string;
+  post_count: number;
+  feed_url: string;
+  parent: number;
+  meta: object;
 }
 
 export default async function BlogPage() {
-  const response = await fetch(
+  // Fetching the categories
+  const categoriesResponse = await fetch(
+    "https://public-api.wordpress.com/rest/v1.1/sites/frankieshrieves.home.blog/categories"
+  );
+  const categoriesData = (await categoriesResponse.json()).categories;
+
+  // Fetching the posts
+  const postResponse = await fetch(
     "https://public-api.wordpress.com/rest/v1.1/sites/frankieshrieves.home.blog/posts/?number=100&context=display&fields=title,date,featured_image,excerpt,ID,slug"
   );
-  const postResponse = await response.json();
-  const posts = await postResponse.posts;
+  const postData = (await postResponse.json()).posts;
 
-  function formatDate(date: string): string {
-    const newDate = new Date(date);
-    return `${newDate.getDate()}/${
-      newDate.getMonth() + 1
-    }/${newDate.getFullYear()}`;
-  }
   // TODO: Build this page. Use this resource- https://dev.to/kendalmintcode/using-wordpress-as-a-headless-cms-with-next-js-2h5p
   // TODO: To get all the posts inner content use:
   //   <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
 
   return (
     <>
-      <h1 className="mt-10">this is just a tribute</h1>
-      <h2>Franks Nuggets</h2>
-      <section className="flex flex-col gap-4">
-        {posts.map((post: Post) => {
+      <IntroBar text={"Franks Nuggets of Knowledge"} />
+
+      <div className="flex gap-4 justify-center p-2">
+        {categoriesData.map((category: Category) => {
+          return (
+            <Link href={`/blog/categories/${category.slug}`} key={category.ID}>
+              {category.name}
+            </Link>
+          );
+        })}
+      </div>
+
+      <p>
+        A foray into different subjects and brain ramblings, from Values to live
+        by, to meditative ponderings.
+      </p>
+
+      <BlogPostExcerpt postData={postData} />
+
+      {/* <section className="flex flex-col gap-4">
+        {postData.map((post: Post) => {
           return (
             <article
               className="wp_teaser p-4 flex flex-col gap-2"
@@ -56,11 +76,11 @@ export default async function BlogPage() {
               <div className="wp_teaser_excerpt_container">
                 <p dangerouslySetInnerHTML={{ __html: post.excerpt }}></p>
               </div>
-              <Link href={`/blog/${post.slug}`}>Read more</Link>
+              <Link href={`/blog/post/${post.slug}`}>Read more</Link>
             </article>
           );
         })}
-      </section>
+      </section> */}
     </>
   );
 }
