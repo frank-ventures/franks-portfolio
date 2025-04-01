@@ -35,9 +35,9 @@ export default function ProjectsList() {
   return (
     <article
       id="projects-list"
-      className="flex flex-col items-center gap-2 border-t-2 border-b-2 border-black py-20"
+      className="flex flex-col items-center gap-2 border-t-2 border-b-2 border-black py-10"
     >
-      <div className="mt-4 bg-red-600 border-2 border-black p-2 w-10/12 max-w-[600px] rounded-2xl">
+      <div className="bg-red-600 border-2 border-black p-2 w-10/12 max-w-[600px] rounded-2xl">
         <h2 className="text-3xl text-center text-yellow-300 text-shadow-withOutline shadow-black ">
           Check out my projects
         </h2>
@@ -53,39 +53,46 @@ export default function ProjectsList() {
             >
               {/* Status and Title */}
               <div className="flex justify-between gap-5 last:m-10 min-h-20">
-                <Status status={project.status} />
-
                 {/* TODO: Give this heading some kind of fancyness */}
                 <ProjectTitle title={project.title} />
+                <Status status={project.status} />
               </div>
 
               {/* Image */}
               <ProjectImage src={project.image} alt={project.alt} />
 
               {/* Description */}
-              <div className="m-6 sm:h-[9rem] p-2 bg-blue-300 bg-opacity-40 rounded-xl shadow-inner shadow-slate-400">
+              <div className="m-6 sm:min-h-[9rem] p-2 bg-blue-300 bg-opacity-40 rounded-xl shadow-inner shadow-slate-400">
                 <p>{project.description}</p>
               </div>
 
               {/* Links */}
               <div className="flex justify-center gap-10 mb-2">
                 {project.githubRepo && (
-                  <Link
-                    className="bg-red-400 rounded-3xl border-b-2 shadow border-red-800 hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200 "
-                    href={project.githubRepo}
-                    target="blank"
-                  >
-                    {GithubIcon(75, 75)}
-                  </Link>
+                  <div className="flex flex-col gap-2 items-center border-l-2 border-r-2 border-red-800 border-opacity-50 p-4 rounded-lg">
+                    <p className="font-semibold">View code</p>
+
+                    <Link
+                      className="bg-red-500 rounded-3xl border-b-2 shadow border-red-800 hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200 max-w-fit"
+                      href={project.githubRepo}
+                      target="blank"
+                    >
+                      <i>{GithubIcon(75, 75)}</i>
+                    </Link>
+                  </div>
                 )}
                 {project.liveLink && (
-                  <Link
-                    className="bg-red-400 rounded-3xl border-b-2 shadow border-red-800 hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200"
-                    href={project.liveLink}
-                    target="blank"
-                  >
-                    {PlayIcon(75, 75)}
-                  </Link>
+                  <div className="flex flex-col gap-2 items-center border-l-2 border-r-2 border-red-800 border-opacity-50 p-4 rounded-lg">
+                    <p className="font-semibold">Live site</p>
+
+                    <Link
+                      className="bg-red-500 rounded-3xl border-b-2 shadow border-red-800 hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200 max-w-fit"
+                      href={project.liveLink}
+                      target="blank"
+                    >
+                      <i> {PlayIcon(75, 75)} </i>
+                    </Link>
+                  </div>
                 )}
               </div>
 

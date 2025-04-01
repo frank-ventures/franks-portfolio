@@ -1,4 +1,5 @@
-import ContentDisplay from "@/components/ContentDisplay";
+import ContentImage from "@/components/ContentImage";
+import ContentWrapper from "@/components/ContentWrapper";
 import IntroBar from "@/components/header/IntroBar";
 import ProjectsList from "@/components/projects/ProjectList";
 import QuickLinks from "@/components/QuickLinks";
@@ -13,63 +14,6 @@ const pageAnchors = [
     text: "Projects",
   },
 ];
-
-const homePageContent = [
-  {
-    imageSrc: "./frankie/frankie-manchester.jpg",
-    imageAlt: "Greyscale image of Frankie smiling in Manchester",
-    text: "As you'll have guessed by now, I am Frankie!",
-  },
-  {
-    imageSrc: "./work/tech-ed-logo.png",
-    imageAlt: "The purple, sand and green logo of the company Tech Educators",
-    text: (
-      <p>
-        Currently I work as an{" "}
-        <span className="text-purple-800 hover:text-green-400 p-1 font-bold bg-green-400 hover:bg-purple-800 rounded-md transition-all">
-          Instructor
-        </span>{" "}
-        at{" "}
-        <a
-          className="text-orange-600 hover:underline"
-          href="https://techeducators.co.uk/"
-        >
-          Tech Educators
-        </a>
-        ; a pretty cool company that delivers bootcamps, with the aim of
-        developing peoples&apos; skills & confidence in the tech. It&apos;s a
-        good fun time!
-      </p>
-    ),
-  },
-  {
-    imageSrc: "./work/ncc-adventure-2.jpg",
-    imageAlt:
-      "Frankie smiling in front of a building called 'Colwick Park Adventure Centre' with his team mates",
-    text: "Before this I did a bunch of other stuff, from gardening, to outdoor adventure instructing, to working in America.",
-  },
-];
-{
-  /* TODO: an about page, then uncomment this and link to it */
-}
-{
-  /* <MeSection
-        imageSrc="./frankie/frankie-manchester.jpg"
-        imageAlt="Greyscale image of Frankie smiling in Manchester"
-        text={
-          <>
-            But you can read more about all that{" "}
-            <a className="text-orange-600 hover:underline" href="#">
-              here
-            </a>{" "}
-            <span className="italic">
-              (and more, like how I think bicycles are utterly and magically
-              awesome)
-            </span>
-          </>
-        }
-      /> */
-}
 
 export default function Home() {
   return (
@@ -99,9 +43,71 @@ export default function Home() {
 
       {/* About Me */}
 
-      <ContentDisplay content={homePageContent} id="about-me" />
+      {/* <ContentDisplay content={homePageContent} /> */}
 
-      {/* Work related */}
+      <ContentWrapper id="about-me">
+        <ContentImage
+          imgSrc="./frankie/frankie-manchester.jpg"
+          imgAlt="Greyscale image of Frankie smiling in Manchester"
+        />
+
+        <p className="max-w-[74ch]">
+          As you&apos;ll have guessed by now, I am Frankie!
+        </p>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <ContentImage
+          imgSrc="./work/tech-ed-logo.png"
+          imgAlt="The purple, sand and green logo of the company Tech Educators"
+        />
+
+        <p className="max-w-[74ch]">
+          Currently I work as an{" "}
+          <span className="text-purple-800 hover:text-green-400 p-1 font-bold bg-green-400 hover:bg-purple-800 rounded-md transition-all">
+            Instructor
+          </span>{" "}
+          at{" "}
+          <a
+            className="text-orange-600 underline underline-offset-2 hover:outline hover:outline-1 hover:outline-offset-2 focus:outline focus:outline-1 focus:outline-offset-2 focus:outline-orange-600 hover:fancy"
+            href="https://techeducators.co.uk/"
+          >
+            Tech Educators
+          </a>
+          ; a pretty cool company that delivers bootcamps, with the aim of
+          developing peoples&apos; skills & confidence in the tech. It&apos;s a
+          good fun time!
+        </p>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <ContentImage
+          imgSrc="./work/ncc-adventure-2.jpg"
+          imgAlt="Frankie smiling in front of a building called 'Colwick Park Adventure Centre' with his team mates"
+        />
+
+        <p className="max-w-[74ch]">
+          Before this I did a bunch of other stuff, from gardening, to outdoor
+          adventure instructing, to working in America.
+        </p>
+      </ContentWrapper>
+
+      {/* TODO: an about page, then uncomment this and link to it */}
+      {/* <ContentWrapper>
+        <ContentImage imgSrc="something" imgAlt="something" />
+        <p className="max-w-[74ch]">
+          But you can read more about all that{" "}
+          <a className="text-orange-600 hover:underline" href="/about">
+            here
+          </a>{" "}
+          <span className="italic">
+            (and more, like how I think bicycles are utterly and magically
+            awesome)
+          </span>
+        </p>
+      </ContentWrapper> */}
+
+      {/* My Projects */}
 
       <ProjectsList />
     </main>

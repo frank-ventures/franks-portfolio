@@ -14,10 +14,10 @@ const siteNavigation = [
     href: "/",
     text: "Home",
   },
-  {
-    href: "/about",
-    text: "Read more",
-  },
+  // {
+  //   href: "/about",
+  //   text: "Read more",
+  // },
 ];
 
 export default function QuickLinks({
