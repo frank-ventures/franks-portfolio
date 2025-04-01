@@ -52,6 +52,10 @@ export default function Credits() {
       title: "Three Dot More Icon",
       link: "https://www.flaticon.com/free-icon/more_1477110?term=three+dots&page=1&position=19&origin=tag&related_id=1477110",
     },
+    {
+      title: "Pointy Arrow Menu Icon",
+      link: "https://www.flaticon.com/free-icon/next_709586?term=arrow&page=1&position=93&origin=search&related_id=709586",
+    },
   ];
 
   const codepenCredits = [
