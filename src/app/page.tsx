@@ -43,12 +43,12 @@ export default function Home() {
 
       {/* About Me */}
 
-      {/* <ContentDisplay content={homePageContent} /> */}
-
       <ContentWrapper id="about-me">
         <ContentImage
           imgSrc="./frankie/frankie-manchester.jpg"
           imgAlt="Greyscale image of Frankie smiling in Manchester"
+          secondImgSrc="./frankie/frankie-sheffield.jpg"
+          secondImgAlt="Frankie smiling on top of a wall when doing Parkour in Sheffield."
         />
 
         <p className="max-w-[74ch]">
@@ -60,6 +60,8 @@ export default function Home() {
         <ContentImage
           imgSrc="./work/tech-ed-logo.png"
           imgAlt="The purple, sand and green logo of the company Tech Educators"
+          secondImgSrc="./frankie/frankie-nordevcon-point.png"
+          secondImgAlt="Frankie pointing to the camera at Norfolk Developers Conference 2025"
         />
 
         <p className="max-w-[74ch]">
@@ -84,6 +86,8 @@ export default function Home() {
         <ContentImage
           imgSrc="./work/ncc-adventure-2.jpg"
           imgAlt="Frankie smiling in front of a building called 'Colwick Park Adventure Centre' with his team mates"
+          secondImgSrc="./frankie/cycling-thailand.jpg"
+          secondImgAlt="Frankie riding a dutch bicycle to Bangkok on a holiday in Thailand."
         />
 
         <p className="max-w-[74ch]">

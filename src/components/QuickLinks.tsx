@@ -11,7 +11,7 @@ interface PageAnchors {
 
 const siteNavigation = [
   {
-    href: "#",
+    href: "#top",
     text: "Top",
   },
   {

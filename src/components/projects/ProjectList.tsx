@@ -49,7 +49,7 @@ export default function ProjectsList() {
           return (
             <article
               key={`project_${index}`}
-              className="flex flex-col gap-2 justify-between p-4 m-2 border-2 border-black rounded-md bg-blue-400  max-w-[500px]"
+              className="flex flex-col gap-2 justify-between p-4 m-2 border-2 border-blue-600 rounded-md bg-blue-400  max-w-[500px]"
             >
               {/* Status and Title */}
               <div className="flex justify-between gap-5 last:m-10 min-h-20">

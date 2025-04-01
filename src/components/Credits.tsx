@@ -78,6 +78,10 @@ export default function Credits() {
       title: "And an SVG Path Visualiser",
       link: "https://svg-path-visualizer.netlify.app/",
     },
+    {
+      title: "How to make an image flipper with React (which I adapted)",
+      link: "https://medium.com/@amie.n.foster/flipping-out-how-to-create-a-card-that-flips-with-react-and-css-131dba54fc96",
+    },
   ];
 
   return (

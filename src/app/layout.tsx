@@ -38,6 +38,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth scroll-p-28 m-0 p-0">
       <body
         className={`${raleway.className} ${spideyFont.variable} ${amazing.variable} antialiased h-full m-0 p-0 box-border leading-7`}
+        id="#top"
       >
         <Header />
 

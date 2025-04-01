@@ -44,7 +44,7 @@
 
 /* --- --- --- --- */
 /* Bouncing "O" in Navbar */
-.text {
+.navbar-title {
   color: #ff5722;
   display: inline-block;
   height: var(--topbounce);
