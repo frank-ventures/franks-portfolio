@@ -1,9 +1,7 @@
 import BlogPostExcerpt from "@/components/blog/BlogPostExcerpt";
 import IntroBar from "@/components/header/IntroBar";
 
-type PageProps = {
-  category: string;
-};
+type PageProps = Promise<{ category: string }>;
 
 export default async function BlogCategoryPage({
   params,
