@@ -32,36 +32,24 @@ export default function QuickLinks({
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(true);
 
-  // This function helps to remove the QuickLinks from the DOM when the 'menu' is closed and the transition has ended
-  function setDisplayToNone(event: React.SyntheticEvent) {
-    event.stopPropagation();
-    const target = event.target as HTMLInputElement;
-    if (target == event.currentTarget) {
-      if (target.classList.contains("opacity-0")) {
-        target.style.display = "none";
-      } else {
-        target.style.display = "";
-      }
-    }
-  }
   return (
     <nav className="border-t border-b border-black flex flex-row-reverse justify-between gap-4 w-full px-4 py-2 shadow shadow-black sticky top-8 bg-slate-200 bg-opacity-50 backdrop-blur z-10">
       {/* Three Dot Icon to show there's more items to see */}
       <div className="flex gap-2">
         <p
-          className={`${isOpen && `-translate-x-40 opacity-0`} transition-all`}
-          style={{ display: isOpen ? "block" : "" }}
-          onTransitionEnd={setDisplayToNone}
+          className={`${
+            isOpen && `-translate-x-40 opacity-0 invisible`
+          } transition-all duration-300 `}
         >
           See More
         </p>
 
         <button onClick={() => setIsOpen(!isOpen)}>
           <img
-            src="./more.png"
+            src="./next.png"
             className={`${
-              isOpen ? "rotate-90 " : "animate-pulse"
-            } transition-all h-6 w-6 hover:cursor-pointer z-50`}
+              isOpen ? "rotate-0" : "animate-pulse -scale-x-100"
+            } transition-all duration-300 h-6 w-6 hover:cursor-pointer z-50`}
           />
         </button>
       </div>
@@ -69,10 +57,8 @@ export default function QuickLinks({
       {/* A wrapper to simplify what gets a transition effect applied to it. */}
       <div
         className={` ${
-          isOpen ? "opacity-100 block" : "opacity-0 translate-x-full  "
-        } flex gap-2 transition-all duration-100 sm:duration-500 `}
-        style={{ display: isOpen ? "flex" : "" }}
-        onTransitionEnd={setDisplayToNone}
+          isOpen ? "opacity-100 block" : "opacity-0 translate-x-full invisible"
+        } flex gap-2 transition-all duration-300 sm:duration-500 `}
       >
         <p className={`text-gray-600`}>Jump to:</p>
 
