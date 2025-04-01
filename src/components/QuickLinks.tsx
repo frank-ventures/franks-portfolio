@@ -28,6 +28,18 @@ export default function QuickLinks({
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(true);
 
+  // This function helps to remove the QuickLinks from the DOM when the 'menu' is closed and the transition has ended
+  function setDisplayToNone(event: React.SyntheticEvent) {
+    event.stopPropagation();
+    const target = event.target as HTMLInputElement;
+    if (target == event.currentTarget) {
+      if (target.classList.contains("opacity-0")) {
+        target.style.display = "none";
+      } else {
+        target.style.display = "";
+      }
+    }
+  }
   return (
     <nav className="border-t border-b border-black flex flex-row-reverse justify-between gap-4 w-full px-4 py-2 shadow shadow-black sticky top-8 bg-slate-200 bg-opacity-50 backdrop-blur z-10">
       {/* Three Dot Icon to show there's more items to see */}
@@ -35,7 +47,7 @@ export default function QuickLinks({
         <p
           className={`${isOpen && `-translate-x-40 opacity-0`} transition-all`}
         >
-          More
+          See More
         </p>
         <img
           onClick={() => setIsOpen(!isOpen)}
@@ -49,16 +61,18 @@ export default function QuickLinks({
       {/* A wrapper to simplify what gets a transition effect applied to it. */}
       <div
         className={` ${
-          isOpen ? "opacity-100" : "opacity-0 translate-x-96"
-        } flex gap-2 transition-all duration-100 sm:duration-500`}
+          isOpen ? "opacity-100 block" : "opacity-0 translate-x-full  "
+        } flex gap-2 transition-all duration-100 sm:duration-500 `}
+        style={{ display: isOpen ? "flex" : "" }}
+        onTransitionEnd={setDisplayToNone}
       >
-        <p className={` text-gray-600`}>Jump to:</p>
+        <p className={`text-gray-600`}>Jump to:</p>
 
         {/* Anchors unique to each page */}
         {pageAnchors?.map((link, index) => {
           return (
             <Link
-              className={`relative before:content-[''] before:w-2 before:h-[2px] before:bg-gray-700 before:top-[24px]  before:absolute hover:before:w-full hover:before:bg-orange-600 hover:before:left-0 before:transition-all before:duration-500`}
+              className={`relative before:content-[''] before:w-2 before:h-[2px] before:bg-red-500 before:top-[24px]  before:absolute hover:before:w-full hover:before:left-0 before:transition-all before:duration-500`}
               key={`anchor_${index}`}
               href={`${link.href}`}
             >
