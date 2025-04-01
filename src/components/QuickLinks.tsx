@@ -11,6 +11,10 @@ interface PageAnchors {
 
 const siteNavigation = [
   {
+    href: "#",
+    text: "Top",
+  },
+  {
     href: "/",
     text: "Home",
   },
@@ -46,16 +50,20 @@ export default function QuickLinks({
       <div className="flex gap-2">
         <p
           className={`${isOpen && `-translate-x-40 opacity-0`} transition-all`}
+          style={{ display: isOpen ? "block" : "" }}
+          onTransitionEnd={setDisplayToNone}
         >
           See More
         </p>
-        <img
-          onClick={() => setIsOpen(!isOpen)}
-          src="./more.png"
-          className={`${
-            isOpen ? "rotate-90 " : "animate-pulse"
-          } transition-all h-6 w-6 hover:cursor-pointer z-50`}
-        />
+
+        <button onClick={() => setIsOpen(!isOpen)}>
+          <img
+            src="./more.png"
+            className={`${
+              isOpen ? "rotate-90 " : "animate-pulse"
+            } transition-all h-6 w-6 hover:cursor-pointer z-50`}
+          />
+        </button>
       </div>
 
       {/* A wrapper to simplify what gets a transition effect applied to it. */}
@@ -87,7 +95,7 @@ export default function QuickLinks({
               <Link
                 className={`${
                   pathname === link.href ? "hidden" : ""
-                } relative before:content-[''] before:w-2 before:h-[2px] before:bg-gray-700 before:top-[24px]  before:absolute hover:before:w-full hover:before:bg-orange-600 hover:before:left-0 before:transition-all before:duration-500`}
+                } relative before:content-[''] before:w-2 before:h-[2px] before:bg-red-500 before:top-[24px]  before:absolute hover:before:w-full hover:before:bg-orange-600 hover:before:left-0 before:transition-all before:duration-500`}
                 key={`permanentLink_${index}`}
                 href={`${link.href}`}
               >

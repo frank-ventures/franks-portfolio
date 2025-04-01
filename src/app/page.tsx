@@ -69,7 +69,7 @@ export default function Home() {
           </span>{" "}
           at{" "}
           <a
-            className="text-orange-600 underline underline-offset-2 hover:outline hover:outline-1 hover:outline-offset-2 focus:outline focus:outline-1 focus:outline-offset-2 focus:outline-orange-600 hover:fancy"
+            className="text-orange-600 underline underline-offset-2 hover:fancy hover:animate-pulse"
             href="https://techeducators.co.uk/"
           >
             Tech Educators

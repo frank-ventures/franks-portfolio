@@ -37,6 +37,11 @@
   --topbounce: calc(var(--textsize) * 2);
 }
 
+:focus-visible {
+  outline: #eaff04 4px solid;
+  outline-offset: 2px;
+}
+
 /* --- --- --- --- */
 /* Bouncing "O" in Navbar */
 .text {
