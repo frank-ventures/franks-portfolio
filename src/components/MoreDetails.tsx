@@ -10,15 +10,9 @@ export default function MoreDetails({ children }: { children: ReactNode }) {
         <p>Read More</p>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-red-600 rounded-xl border-2 border-black font-semibold text-3xl"
+          className="bg-red-600 rounded-xl border-2 border-black font-semibold"
+          aria-label="Click this button to open a box to read more about his experiences"
         >
-          {/* <img
-            src="./next.png"
-            height={20}
-            width={20}
-            className={isOpen ? `rotate-[270deg] bg-yellow-300` : `rotate-90`}
-          ></img> */}
-          {/* <p className={isOpen ? `rotate-180` : ``}>{`V`}</p> */}
           <svg
             className={`h-12 ${
               isOpen ? "rotate-[270deg]" : "rotate-90 animate-pulse"
@@ -44,7 +38,7 @@ export default function MoreDetails({ children }: { children: ReactNode }) {
       </div>
 
       {isOpen && (
-        <div className="absolute top-10 z-10 bg-blue-400 p-2 rounded-lg h-40 overflow-scroll shadow-xl shadow-black">
+        <div className="absolute top-14 sm:-left-20 z-10  bg-red-600 p-4 rounded-lg h-40 w-full sm:w-[120%] overflow-scroll shadow-xl shadow-black backdrop-blur-2xl bg-opacity-40 text-lg font-semibold">
           {children}
         </div>
       )}

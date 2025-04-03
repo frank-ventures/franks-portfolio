@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth scroll-p-28 m-0 p-0">
+    <html lang="en" className="scroll-smooth scroll-p-20 m-0 p-0">
       <body
         className={`${raleway.className} ${spideyFont.variable} ${amazing.variable} antialiased h-full m-0 p-0 box-border leading-7`}
         id="#top"

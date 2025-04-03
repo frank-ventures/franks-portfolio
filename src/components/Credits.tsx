@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export default function Credits() {
   const iconCredits = [
     {
@@ -55,6 +57,10 @@ export default function Credits() {
     {
       title: "Pointy Arrow Menu Icon",
       link: "https://www.flaticon.com/free-icon/next_709586?term=arrow&page=1&position=93&origin=search&related_id=709586",
+    },
+    {
+      title: "Angle Bracket Icon",
+      link: "https://www.orioniconlibrary.com/icon/angle-right-203?from=query&name=right%20arrow",
     },
   ];
 

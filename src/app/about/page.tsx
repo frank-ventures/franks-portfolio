@@ -4,6 +4,17 @@ import IntroBar from "@/components/header/IntroBar";
 import MoreDetails from "@/components/MoreDetails";
 import QuickLinks from "@/components/QuickLinks";
 
+const pageAnchors = [
+  {
+    href: "#experiences",
+    text: "My experience",
+  },
+  {
+    href: "#move-to-tech",
+    text: "Tech",
+  },
+];
+
 // Who am I?....no seriously
 // Then the clip or something of Jackie Chan
 export default function About() {
@@ -28,9 +39,9 @@ export default function About() {
           </>
         }
       />
-      <QuickLinks />
+      <QuickLinks pageAnchors={pageAnchors} />
 
-      <ContentWrapper>
+      <ContentWrapper id="experiences">
         <ContentImage
           imgSrc="./frankie/frankie-india-motorcycle.jpg"
           imgAlt="Frankie riding a motorcycle in the greener middle belt of India"
@@ -82,7 +93,8 @@ export default function About() {
           </MoreDetails>
         </section>
       </ContentWrapper>
-      <ContentWrapper>
+
+      <ContentWrapper id="move-to-tech">
         <ContentImage
           imgSrc="./frankie/frankie-nordevcon-convo.jpg"
           imgAlt="Frankie at Norfolk Developers Conference 2025 laughing in conversation."
