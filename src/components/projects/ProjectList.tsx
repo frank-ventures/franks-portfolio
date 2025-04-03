@@ -62,37 +62,41 @@ export default function ProjectsList() {
               <ProjectImage src={project.image} alt={project.alt} />
 
               {/* Description */}
-              <div className="m-6 sm:min-h-[9rem] p-2 bg-blue-300 bg-opacity-40 rounded-xl shadow-inner shadow-slate-400">
+              <div className="m-6 sm:min-h-[9rem] p-2 bg-blue-300 bg-opacity-40 rounded-xl shadow-inner shadow-slate-400 text-lg">
                 <p>{project.description}</p>
               </div>
 
               {/* Links */}
               <div className="flex justify-center gap-10 mb-2">
                 {project.githubRepo && (
-                  <div className="flex flex-col gap-2 items-center border-l-2 border-r-2 border-red-800 border-opacity-50 p-4 rounded-lg">
-                    <p className="font-semibold">View code</p>
+                  <Link
+                    href={project.githubRepo}
+                    target="blank"
+                    className="flex flex-col gap-2 items-center bg-red-600 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200"
+                  >
+                    <p className="font-semibold tracking-wide text-yellow-300">
+                      View code
+                    </p>
 
-                    <Link
-                      className="bg-red-500 rounded-3xl border-b-2 shadow border-red-800 hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200 max-w-fit"
-                      href={project.githubRepo}
-                      target="blank"
-                    >
-                      <i>{GithubIcon(75, 75)}</i>
-                    </Link>
-                  </div>
+                    <i className="bg-blue-400 rounded-3xl border shadow shadow-black border-black  max-w-fit">
+                      {GithubIcon(75, 75)}
+                    </i>
+                  </Link>
                 )}
                 {project.liveLink && (
-                  <div className="flex flex-col gap-2 items-center border-l-2 border-r-2 border-red-800 border-opacity-50 p-4 rounded-lg">
-                    <p className="font-semibold">Live site</p>
+                  <Link
+                    href={project.liveLink}
+                    target="blank"
+                    className="flex flex-col gap-2 items-center bg-red-600 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200"
+                  >
+                    <p className="font-semibold tracking-wide text-yellow-300">
+                      Live site
+                    </p>
 
-                    <Link
-                      className="bg-red-500 rounded-3xl border-b-2 shadow border-red-800 hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200 max-w-fit"
-                      href={project.liveLink}
-                      target="blank"
-                    >
-                      <i> {PlayIcon(75, 75)} </i>
-                    </Link>
-                  </div>
+                    <i className="bg-blue-400 rounded-3xl border shadow shadow-black border-black  max-w-fit">
+                      {PlayIcon(75, 75)}{" "}
+                    </i>
+                  </Link>
                 )}
               </div>
 

@@ -22,12 +22,14 @@ export default function ContentImage({
   // When an image is clicked, it sets the state of 'flip' to the opposite.
   return (
     <div
-      className={`card flex justify-center items-center  h-[20rem] w-full max-w-[20rem] [transform-style:preserve-3D] relative duration-1000 ${
+      className={`card flex justify-center items-center  h-[20rem] min-w-[20rem] w-[20rem] [transform-style:preserve-3D] relative duration-1000 ${
         flip ? `[transform:rotateY(180deg)]` : `[transform:rotateY(0deg)]`
       }`}
     >
       <button
-        className="absolute h-full w-full [backface-visibility:hidden]"
+        className={`absolute h-full w-full [backface-visibility:hidden] ${
+          secondImgSrc ? `cursor-pointer` : `cursor-default`
+        }`}
         onClick={() => {
           if (secondImgSrc) {
             setFlip(!flip);
@@ -37,7 +39,7 @@ export default function ContentImage({
         <img
           src={imgSrc}
           alt={imgAlt}
-          className="object-cover h-full w-full object-[30%_10%] rounded-xl "
+          className="object-cover h-full w-full object-[50%_10%] rounded-xl "
         />
       </button>
       {secondImgSrc && (
@@ -50,7 +52,7 @@ export default function ContentImage({
           <img
             src={secondImgSrc}
             alt={secondImgAlt}
-            className="object-cover h-full w-full object-[30%_10%] rounded-xl "
+            className="object-cover h-full w-full object-[50%_10%] rounded-xl "
           />
         </button>
       )}

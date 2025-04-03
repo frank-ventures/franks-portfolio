@@ -9,7 +9,7 @@ export default function ContentWrapper({
 }) {
   return (
     <section
-      className="flex flex-col p-4 w-full sm:flex-row gap-4 items-center  sm:even:flex-row-reverse odd:bg-slate-300 text-lg"
+      className="flex flex-col p-8 w-full sm:flex-row gap-8 items-center  sm:even:flex-row-reverse odd:bg-slate-300 text-lg"
       id={id}
     >
       {children}

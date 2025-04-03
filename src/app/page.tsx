@@ -71,7 +71,7 @@ export default function Home() {
           </span>{" "}
           at{" "}
           <a
-            className="text-orange-600 underline underline-offset-2 hover:fancy hover:animate-pulse"
+            className="font-semibold text-blue-600 underline underline-offset-2 hover:text-blue-800"
             href="https://techeducators.co.uk/"
           >
             Tech Educators
@@ -86,13 +86,14 @@ export default function Home() {
         <ContentImage
           imgSrc="./work/ncc-adventure-2.jpg"
           imgAlt="Frankie smiling in front of a building called 'Colwick Park Adventure Centre' with his team mates"
-          secondImgSrc="./frankie/cycling-thailand.jpg"
-          secondImgAlt="Frankie riding a dutch bicycle to Bangkok on a holiday in Thailand."
+          secondImgSrc="./frankie/frankie-thailand-cycling-crew.jpg"
+          secondImgAlt="Frankie in Thailand with a group of local cyclists."
         />
 
         <p className="max-w-[74ch]">
           Before this I did a bunch of other stuff, from gardening, to outdoor
-          adventure instructing, to working in America.
+          adventure instructing, to working in America, and plenty of travel in
+          between.
         </p>
       </ContentWrapper>
 

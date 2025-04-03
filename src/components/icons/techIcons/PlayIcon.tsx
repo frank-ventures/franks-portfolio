@@ -3,7 +3,9 @@ export default function PlayIcon(width?: number, height?: number) {
     <svg
       width={width || 50}
       height={height || 50}
-      fill="#000000"
+      fill="rgb(220 38 38)"
+      stroke="black"
+      strokeWidth={2}
       viewBox="0 0 56 56"
       xmlns="http://www.w3.org/2000/svg"
     >

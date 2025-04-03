@@ -33,7 +33,7 @@ export default function QuickLinks({
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <nav className="border-t border-b border-black flex flex-row-reverse justify-between gap-4 w-full px-4 py-2 shadow shadow-black sticky top-8 bg-slate-200 bg-opacity-50 backdrop-blur z-10">
+    <nav className="border-t border-b border-black flex flex-row-reverse justify-between gap-4 w-full px-4 py-2 shadow shadow-black sticky top-8 bg-slate-200 bg-opacity-50 backdrop-blur z-20">
       {/* Three Dot Icon to show there's more items to see */}
       <div className="flex gap-2">
         <p
@@ -45,19 +45,42 @@ export default function QuickLinks({
         </p>
 
         <button onClick={() => setIsOpen(!isOpen)}>
-          <img
+          {/* <img
             src="./next.png"
             className={`${
               isOpen ? "rotate-0" : "animate-pulse -scale-x-100"
             } transition-all duration-300 h-6 w-6 hover:cursor-pointer z-50`}
-          />
+          /> */}
+          <svg
+            className={`h-8 ${
+              isOpen ? "" : "animate-pulse -scale-x-100"
+            } transition-all duration-300 hover:cursor-pointer z-50`}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="12 15 35 35"
+            aria-labelledby="title"
+            aria-describedby="desc"
+            role="img"
+          >
+            <path
+              data-name="layer1"
+              fill="rgb(96 165 250)"
+              stroke="#202020"
+              strokeMiterlimit="10"
+              strokeWidth="2"
+              d="M40 31.998L26 18l-4 4.486 9.515 9.512L22 41.513 26 46l14-14.002z"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            ></path>
+          </svg>
         </button>
       </div>
 
       {/* A wrapper to simplify what gets a transition effect applied to it. */}
       <div
         className={` ${
-          isOpen ? "opacity-100 block" : "opacity-0 translate-x-full invisible"
+          isOpen
+            ? "opacity-100 block"
+            : "opacity-0 translate-x-4 sm:translate-x-full invisible"
         } flex gap-2 transition-all duration-300 sm:duration-500 `}
       >
         <p className={`text-gray-600`}>Jump to:</p>
@@ -66,7 +89,7 @@ export default function QuickLinks({
         {pageAnchors?.map((link, index) => {
           return (
             <Link
-              className={`relative before:content-[''] before:w-2 before:h-[2px] before:bg-red-500 before:top-[24px]  before:absolute hover:before:w-full hover:before:left-0 before:transition-all before:duration-500`}
+              className={`relative before:content-[''] before:w-2 before:h-[2px] before:bg-blue-400 before:top-[24px]  before:absolute hover:before:w-full hover:before:left-0 before:transition-all before:duration-500`}
               key={`anchor_${index}`}
               href={`${link.href}`}
             >
@@ -81,7 +104,7 @@ export default function QuickLinks({
               <Link
                 className={`${
                   pathname === link.href ? "hidden" : ""
-                } relative before:content-[''] before:w-2 before:h-[2px] before:bg-red-500 before:top-[24px]  before:absolute hover:before:w-full hover:before:bg-orange-600 hover:before:left-0 before:transition-all before:duration-500`}
+                } relative before:content-[''] before:w-2 before:h-[2px] before:bg-blue-400 before:top-[24px]  before:absolute hover:before:w-full hover:before:bg-orange-600 hover:before:left-0 before:transition-all before:duration-500`}
                 key={`permanentLink_${index}`}
                 href={`${link.href}`}
               >
