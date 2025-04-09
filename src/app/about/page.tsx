@@ -7,7 +7,7 @@ import QuickLinks from "@/components/QuickLinks";
 const pageAnchors = [
   {
     href: "#experiences",
-    text: "My experience",
+    text: "Experience",
   },
   {
     href: "#move-to-tech",
