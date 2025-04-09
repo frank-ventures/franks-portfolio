@@ -60,6 +60,18 @@ export default function Credits() {
       title: "Angle Bracket Icon",
       link: "https://www.orioniconlibrary.com/icon/angle-right-203?from=query&name=right%20arrow",
     },
+    {
+      title: "Spider 01 SVG",
+      link: "https://www.svgrepo.com/svg/487823/spider",
+    },
+    {
+      title: "Spider 02 SVG",
+      link: "https://www.svgrepo.com/svg/481907/spider-4",
+    },
+    {
+      title: "Spider 03 SVG",
+      link: "https://www.svgrepo.com/svg/400766/spider",
+    },
   ];
 
   const codepenCredits = [
@@ -93,33 +105,62 @@ export default function Credits() {
   ];
 
   return (
-    <div>
-      <p>Icons I used</p>
-      {iconCredits.map((credit, index) => {
-        return (
-          <p key={`credit_${index}`}>
-            {credit.title}: {credit.link}
-          </p>
-        );
-      })}
+    <section className="credit-container w-full text-center pt-4">
+      <h2 className="text-2xl">Click a button to visit the resource</h2>
+      <article id="icons" className="credit-grid ">
+        <h3 className="text-xl col-span-full justify-self-center pt-4 border-t-4 border-blue-800">
+          Icons used
+        </h3>
+        {iconCredits.map((credit, index) => {
+          return <Credit key={`credit_icon_${index}`} credit={credit} />;
+        })}
+        <img
+          src="spider-01.svg"
+          alt=""
+          className="h-10 col-span-full justify-self-center"
+        />
+      </article>
 
-      <p>CodePens I used</p>
-      {codepenCredits.map((credit, index) => {
-        return (
-          <p key={`credit_${index}`}>
-            {credit.title}: {credit.link}
-          </p>
-        );
-      })}
+      <article id="codepens" className="credit-grid">
+        <h3 className="text-xl col-span-full justify-self-center pt-4 border-t-4 border-blue-800">
+          CodePens used
+        </h3>
+        {codepenCredits.map((credit, index) => {
+          return <Credit key={`credit_codepen_${index}`} credit={credit} />;
+        })}
+        <img
+          src="spider-02.svg"
+          alt=""
+          className="h-10 col-span-full justify-self-center"
+        />
+      </article>
 
-      <p>Other stuff I used</p>
-      {otherCredits.map((credit, index) => {
-        return (
-          <p key={`credit_${index}`}>
-            {credit.title}: {credit.link}
-          </p>
-        );
-      })}
-    </div>
+      <article id="others" className="credit-grid">
+        <h3 className="text-xl col-span-full justify-self-center pt-4 border-t-4 border-blue-800">
+          Other stuff used
+        </h3>
+        {otherCredits.map((credit, index) => {
+          return <Credit key={`credit_other_${index}`} credit={credit} />;
+        })}
+        <img
+          src="spider-03.svg"
+          alt=""
+          className="h-10 col-span-full justify-self-center"
+        />
+      </article>
+    </section>
+  );
+}
+
+type Credit = {
+  title: string;
+  link: string;
+};
+
+function Credit({ credit }: { credit: Credit }) {
+  return (
+    <button className="min-h-24 text-yellow-300 font-semibold bg-red-600 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200">
+      <a href={credit.link}>{credit.title}</a>
+    </button>
   );
 }

@@ -22,6 +22,10 @@ const siteNavigation = [
     href: "/about",
     text: "Read more",
   },
+  {
+    href: "/credits",
+    text: "Credits",
+  },
 ];
 
 export default function QuickLinks({
@@ -45,12 +49,6 @@ export default function QuickLinks({
         </p>
 
         <button onClick={() => setIsOpen(!isOpen)}>
-          {/* <img
-            src="./next.png"
-            className={`${
-              isOpen ? "rotate-0" : "animate-pulse -scale-x-100"
-            } transition-all duration-300 h-6 w-6 hover:cursor-pointer z-50`}
-          /> */}
           <svg
             className={`h-8 ${
               isOpen ? "" : "animate-pulse -scale-x-100"
