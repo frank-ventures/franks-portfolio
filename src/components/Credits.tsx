@@ -86,6 +86,10 @@ export default function Credits() {
       title: "How to make an image flipper with React (which I adapted)",
       link: "https://medium.com/@amie.n.foster/flipping-out-how-to-create-a-card-that-flips-with-react-and-css-131dba54fc96",
     },
+    {
+      title: "SVG to Data URI (for CSS) Converter",
+      link: "https://www.svgbackgrounds.com/tools/svg-to-css/",
+    },
   ];
 
   return (

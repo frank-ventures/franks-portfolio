@@ -1,7 +1,6 @@
 import ContentImage from "@/components/ContentImage";
 import ContentWrapper from "@/components/ContentWrapper";
 import IntroBar from "@/components/header/IntroBar";
-import MoreDetails from "@/components/MoreDetails";
 import QuickLinks from "@/components/QuickLinks";
 
 const pageAnchors = [
@@ -52,45 +51,83 @@ export default function About() {
           <h2 className="ml-2 text-2xl font-bold">
             Experiences I&apos;ve enjoyed
           </h2>
-          <p className="">
+          <p className="mb-4">
             I&apos;ve been coaching, instructing and sharing ideas for over 15
-            years.
+            years. Here&apos;s a brief history of time!
           </p>
-          <MoreDetails>
-            <ul className="flex flex-col gap-4 max-w-[74ch]">
-              <li>
-                I started with instructing Parkour whilst at school, and also
-                gained my Diploma in Personal Training.
-              </li>
-              <li>
-                Over many years I&apos;ve coached Parkour and other activities
-                across England and in America.
-              </li>
-              <li>
-                I spent a good chunk of time working in respite and residential
-                care, with children with disabilities.
-              </li>
-              <li>
-                I built an outdoor education programme at a primary school as a
-                Forest School Leader.
-              </li>
-              <li>
-                I developed and delivered outdoor adventurous activities, at an
-                outdoor centre and across Nottingham City for multiple years.
-              </li>
-              <li>
-                I&apos;ve completed many gardening and landscaping jobs for
-                private clients (all whilst travelling by bicycle too, I&apos;ll
-                have you know!).
-              </li>
-              <li>I developed health and wellbeing provision for the NHS.</li>
-              <li>
-                And at many different points, have had my own adventures and
-                learnings out of life; ranging from motorcycling across India &
-                Vietnam, to cycling across Thailand, and living on a boat!
-              </li>
-            </ul>
-          </MoreDetails>
+
+          <details>
+            <summary>Personal Training</summary>
+            <p>
+              I started my coaching journey with instructing Parkour whilst at
+              school. I then gained my Diploma in Personal Training and coached
+              clients across many gyms.
+            </p>
+          </details>
+          <details>
+            <summary>Parkour</summary>
+            <p>
+              Seeing the potential to get closer to &ldquo;Spider-Man&rdquo;
+              status, I needed no convincing to start my training journey! Over
+              many years I&apos;ve coached Parkour and other activities across
+              England and in America.
+            </p>
+            <p>
+              It still provides an awesome challenge, and a tribe I&apos;ve
+              never quite had before.
+            </p>
+          </details>
+          <details>
+            <summary>Childrens Care Work</summary>
+            <p>
+              I spent a good chunk of time working in respite and residential
+              care, with children with disabilities.
+            </p>
+          </details>
+          <details>
+            <summary>Forest School Leader</summary>
+            <p>
+              I built an outdoor education programme at a primary school from
+              scratch, as a Forest School Leader.
+            </p>
+          </details>
+          <details>
+            <summary>Outdoor Adventure Instructor</summary>
+            <p>
+              I developed and delivered outdoor adventurous activities, at an
+              outdoor centre and across Nottingham City for multiple years.
+            </p>
+          </details>
+          <details>
+            <summary>Health & Wellbeing Coach</summary>
+            <p>I developed health and wellbeing provision for the NHS.</p>
+          </details>
+          <details>
+            <summary>Landscape Gardener</summary>
+            <p>
+              I&apos;ve completed many gardening and landscaping jobs for
+              private clients (all whilst travelling by bicycle too, I&apos;ll
+              have you know!).
+            </p>
+          </details>
+          <details>
+            <summary>Freelance &ldquo;Guy-in-the-chair&rdquo;</summary>
+            <p>
+              I&apos;ve completed work for private clients which has utilised my
+              technical skills; including the formatting of e-books and a
+              governmental service review, as well as providing direction on
+              content and editorial feedback.
+            </p>
+          </details>
+          <details>
+            <summary>Adventurer</summary>
+            <p>
+              And at many different points, have had my own adventures and
+              learnings out of life; ranging from motorcycling across India &
+              Vietnam, to cycling across Thailand, and living on a boat (or
+              two)!
+            </p>
+          </details>
         </section>
       </ContentWrapper>
 

@@ -43,6 +43,38 @@
 }
 
 /* --- --- --- --- */
+/* Change the marker on the Details list */
+summary {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+  font-weight: 500;
+}
+/* Safari.... */
+summary::-webkit-details-marker {
+  display: none;
+}
+/* Space the text out a little. */
+details p {
+  margin-top: 0.5rem;
+}
+/* Make a custom marker */
+summary::before {
+  display: inline-block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="12 15 35 35" aria-labelledby="title" aria-describedby="desc" role="img" ><path data-name="layer1" fill="rgb(96 165 250)" stroke="%23202020" strokeMiterlimit="10" strokeWidth="2" d="M40 31.998L26 18l-4 4.486 9.515 9.512L22 41.513 26 46l14-14.002z" strokeLinejoin="round" strokeLinecap="round" ></path></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.2s;
+}
+/* Transition effect */
+details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+/* --- --- --- --- */
 /* Bouncing "O" in Navbar */
 .navbar-title {
   color: #ff5722;
