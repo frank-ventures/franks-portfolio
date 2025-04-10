@@ -1,4 +1,5 @@
-import { getProjects } from "@/stores/projects";
+"use client";
+import { getProjects, getTechStacks } from "@/stores/projects";
 import Status from "@/components/projects/Status";
 import TechStack from "@/components/projects/TechStack";
 import Link from "next/link";
@@ -6,46 +7,81 @@ import GithubIcon from "../icons/techIcons/GithubIcon";
 import PlayIcon from "../icons/techIcons/PlayIcon";
 import ProjectImage from "./ProjectImage";
 import ProjectTitle from "./ProjectTitle";
+import { useEffect, useState } from "react";
 
 export default function ProjectsList() {
   const projects = getProjects();
+  const techStacks = getTechStacks();
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+  const [selected, setSelected] = useState(0);
 
-  //  Potential foray into a 3D hover thing
-  // https://dev.to/webdiscus/3d-parallax-effect-by-moving-mouse-using-htmlcss-7b2
-  // https://www.aktek.io/en/about-us
-  // const [rotateX, setRotateX] = useState(0);
-  // const [rotateY, setRotateY] = useState(0);
+  function handleSubmit(formData: FormData) {
+    const techStackNumber = formData.get("projectType") as string;
 
-  // onMouseMove={(event) => {
-  //   const thisElement = event.target;
-  //   console.log(thisElement.style);
+    displayProjects(techStackNumber);
+  }
 
-  //   const smoothMove = 0.1;
-  //   setRotateX(
-  //     (event.clientY - window.innerHeight / 2) * smoothMove
-  //   );
-  //   setRotateY(
-  //     ((event.clientX - window.innerWidth / 2) * -smoothMove) / 2
-  //   );
+  function displayProjects(techStackAsString: string) {
+    const techStackNumber = parseInt(techStackAsString);
+    if (techStackNumber == 0) {
+      console.log("yes");
+      setFilteredProjects(projects);
+      return;
+    }
+    const newFilteredProjects = projects.filter((project) => {
+      let match = false;
+      project.techStack.forEach((stack) => {
+        if (stack == techStackNumber) {
+          match = true;
+        }
+      });
+      if (match) {
+        return project;
+      }
+    });
+    setFilteredProjects(newFilteredProjects);
+  }
 
-  //   thisElement.style.setProperty("--rotate-x", `${rotateX}deg`);
-  //   thisElement.style.setProperty("--rotate-y", `${rotateY}deg`);
-  // }}
+  useEffect(() => {
+    setFilteredProjects(projects);
+  }, [projects]);
 
   return (
     <article
       id="projects-list"
-      className="flex flex-col items-center gap-2 border-t-2 border-b-2 border-black py-10"
+      className="flex flex-col items-center gap-2 border-t-2 border-b-2 border-black py-10 w-full"
     >
       <div className="bg-red-600 border-2 border-black p-2 w-10/12 max-w-[600px] rounded-2xl">
-        <h2 className="text-3xl text-center text-yellow-300 text-shadow-withOutline shadow-black ">
+        <h2 className="text-3xl text-center text-yellow-300 text-shadow-withOutline shadow-black w-full">
           Check out my projects
         </h2>
       </div>
 
+      <form action={handleSubmit} className="flex gap-4">
+        <label htmlFor="projectType">View Projects of a Tech Stack:</label>
+        <select
+          name="projectType"
+          id="projectType"
+          onChange={(e) => {
+            setSelected(parseInt(e.currentTarget.value));
+          }}
+          value={selected}
+        >
+          <option value="0">All</option>
+          {techStacks.map((stack, index) => {
+            return (
+              <option key={index} value={stack.id}>
+                {stack.title}
+              </option>
+            );
+          })}
+        </select>
+        <input type="submit" value={"Go"} />
+      </form>
+
       {/* Project List */}
       <section className={`flex max-w-full flex-wrap justify-center `}>
-        {projects.map((project, index) => {
+        {filteredProjects.map((project, index) => {
           return (
             <article
               key={`project_${index}`}

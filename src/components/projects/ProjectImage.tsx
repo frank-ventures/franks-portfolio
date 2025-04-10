@@ -13,17 +13,12 @@ export default function ProjectImage({
       return (2 * x * out) / maxIn - out;
     }
 
-    console.log("event is ", event);
     const thisElement = event.target as HTMLImageElement;
     const thisElementRect = event.currentTarget.getBoundingClientRect();
-    console.log("this elemnent rect is", thisElementRect);
-    console.log(thisElement.style);
     const x = event.clientX - thisElementRect.left;
     const y = event.clientY - thisElementRect.top;
     const rY = calcDeg(x, thisElementRect.width, 25);
     const rX = calcDeg(y, thisElementRect.height, 25);
-
-    console.log(x, y, rX, rY);
 
     thisElement.style.transform =
       "rotateY(" + rY + "deg) rotateX(" + -rX + "deg)";
@@ -32,7 +27,6 @@ export default function ProjectImage({
   }
 
   function parallaxReset(event: React.MouseEvent<HTMLElement>) {
-    console.log("----------------------------");
     const thisElement = event.target as HTMLImageElement;
     thisElement.style.transition = ".2s linear";
     thisElement.style.transform = "rotateY(0deg) rotateX(0deg)";
