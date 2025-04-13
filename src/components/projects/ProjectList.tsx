@@ -15,12 +15,6 @@ export default function ProjectsList() {
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const [selected, setSelected] = useState(0);
 
-  function handleSubmit(formData: FormData) {
-    const techStackNumber = formData.get("projectType") as string;
-
-    displayProjects(techStackNumber);
-  }
-
   function displayProjects(techStackAsString: string) {
     const techStackNumber = parseInt(techStackAsString);
     if (techStackNumber == 0) {
@@ -57,13 +51,17 @@ export default function ProjectsList() {
         </h2>
       </div>
 
-      <form action={handleSubmit} className="flex gap-4">
-        <label htmlFor="projectType">View Projects of a Tech Stack:</label>
+      <form className="flex gap-4 my-4 items-center">
+        <label htmlFor="projectType" className="text-lg font-semibold">
+          See Projects by Tech Stack:
+        </label>
         <select
+          className="p-2 rounded-md shadow-md bg-blue-400 border-b-blue-600 border-b-2 text-white font-semibold"
           name="projectType"
           id="projectType"
           onChange={(e) => {
             setSelected(parseInt(e.currentTarget.value));
+            displayProjects(e.currentTarget.value);
           }}
           value={selected}
         >
@@ -76,7 +74,6 @@ export default function ProjectsList() {
             );
           })}
         </select>
-        <input type="submit" value={"Go"} />
       </form>
 
       {/* Project List */}
