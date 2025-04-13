@@ -129,7 +129,7 @@ const techStacks: TechStacks[] = [
 const projects: Project[] = [
   {
     title: "Monthly Finances Calculator",
-    image: "/projects/monthly-finances.png",
+    image: "/projects/monthly-finances.webp",
     alt: "Screenshot of a Monthly Finances Calculator. Shows a box displaying a users income, and their caluclated take-home pay after taxes.",
     status: 1,
     techStack: [4, 7],
@@ -140,7 +140,7 @@ const projects: Project[] = [
   },
   {
     title: "DarkTiculate",
-    image: "/projects/darkticulate.png",
+    image: "/projects/darkticulate.webp",
     alt: "Screenshot of the game Darkticulate. The homepage shows buttons for 'new game', 'just see cards' and 'user guide'.",
     status: 2,
     techStack: [5, 7, 8],
@@ -151,7 +151,7 @@ const projects: Project[] = [
   },
   {
     title: "Stoic Quoter",
-    image: "/projects/stoic-quoter.png",
+    image: "/projects/stoic-quoter.webp",
     alt: "Screenshot of an app which shows a stoic quote.",
     status: 1,
     techStack: [5, 7, 10],
@@ -161,7 +161,7 @@ const projects: Project[] = [
   },
   {
     title: "Gamelog",
-    image: "/projects/gamelog.png",
+    image: "/projects/gamelog.webp",
     alt: "Screenshot of an app which lets you search for video games. A search box displays results from the term 'Mario'.",
     status: 2,
     techStack: [5, 7, 10, 11],
@@ -172,7 +172,7 @@ const projects: Project[] = [
   },
   {
     title: "Quote Lasso",
-    image: "/projects/quote-lasso.png",
+    image: "/projects/quote-lasso.webp",
     alt: "Screenshot of an app which lets you search for quotes from the TV show 'Ted Lasso'.",
     status: 2,
     techStack: [5, 7, 10],
@@ -183,7 +183,7 @@ const projects: Project[] = [
   },
   {
     title: "'Ainsley Harriot'-themed Clicker Game",
-    image: "/projects/ainsley-clicker.png",
+    image: "/projects/ainsley-clicker.webp",
     alt: "Screenshot of a game themed on the celebrity 'Ainsley Harriot'. The image shows a counter and his face in a cartoon style.",
     status: 1,
     techStack: [4, 2],
@@ -194,7 +194,7 @@ const projects: Project[] = [
   },
   {
     title: "Unsplash Gallery Search App",
-    image: "/projects/gallery-search.png",
+    image: "/projects/gallery-search.webp",
     alt: "Screenshot of an image search app. It shows results for the word 'orange' shown as a main background and with a thumbnail bar.",
     status: 1,
     techStack: [1, 2, 3, 10],
@@ -205,7 +205,7 @@ const projects: Project[] = [
   },
   {
     title: "This Portfolio Website!",
-    image: "/projects/portfolio-site.png",
+    image: "/projects/portfolio-site.webp",
     alt: "Screenshot of the website you are on now.",
     status: 2,
     techStack: [5, 6, 7],

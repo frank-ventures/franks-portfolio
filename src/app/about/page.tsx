@@ -42,9 +42,9 @@ export default function About() {
 
       <ContentWrapper id="experiences">
         <ContentImage
-          imgSrc="./frankie/frankie-india-motorcycle.jpg"
+          imgSrc="./frankie/frankie-india-motorcycle.webp"
           imgAlt="Frankie riding a motorcycle in the greener middle belt of India"
-          secondImgSrc="./work/ncc-adventure.jpg"
+          secondImgSrc="./work/ncc-adventure.webp"
           secondImgAlt="Frankie with his colleagues in front of Colwick Park Adventure Centre"
         />
         <section className="flex flex-col gap-4 max-w-[74ch]">
@@ -133,9 +133,9 @@ export default function About() {
 
       <ContentWrapper id="move-to-tech">
         <ContentImage
-          imgSrc="./frankie/frankie-nordevcon-convo.jpg"
+          imgSrc="./frankie/frankie-nordevcon-convo.webp"
           imgAlt="Frankie at Norfolk Developers Conference 2025 laughing in conversation."
-          secondImgSrc="./projects/ainsley-clicker.png"
+          secondImgSrc="./projects/ainsley-clicker.webp"
           secondImgAlt="A screenshot of one of Frankies projects, an Ainsley Harriot themed clicker game, whilst on his software development bootcamp."
         />
         <section className="flex flex-col gap-4 max-w-[74ch]">
@@ -161,9 +161,9 @@ export default function About() {
 
       <ContentWrapper>
         <ContentImage
-          imgSrc="./frankie/frankie-parkour-mid-jump.jpg"
+          imgSrc="./frankie/frankie-parkour-mid-jump.webp"
           imgAlt="Frankie in the middle of a jump between railings, practising Parkour."
-          secondImgSrc="./frankie/frankie-climbing-adam-james.jpg"
+          secondImgSrc="./frankie/frankie-climbing-adam-james.webp"
           secondImgAlt="A posed photo of Frankie with two of his friends at in indoor bouldering climbing centre."
         />
         <p>Hobbies and interests. Parkour, climbing, cycling, gaming</p>

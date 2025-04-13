@@ -45,9 +45,9 @@ export default async function Home() {
 
       <ContentWrapper id="about-me">
         <ContentImage
-          imgSrc="./frankie/frankie-manchester.jpg"
+          imgSrc="./frankie/frankie-manchester.webp"
           imgAlt="Greyscale image of Frankie smiling in Manchester"
-          secondImgSrc="./frankie/frankie-sheffield.jpg"
+          secondImgSrc="./frankie/frankie-sheffield.webp"
           secondImgAlt="Frankie smiling on top of a wall when doing Parkour in Sheffield."
         />
 
@@ -58,9 +58,9 @@ export default async function Home() {
 
       <ContentWrapper>
         <ContentImage
-          imgSrc="./work/tech-ed-logo.png"
+          imgSrc="./work/tech-ed-logo.webp"
           imgAlt="The purple, sand and green logo of the company Tech Educators"
-          secondImgSrc="./frankie/frankie-nordevcon-point.png"
+          secondImgSrc="./frankie/frankie-nordevcon-point.webp"
           secondImgAlt="Frankie pointing to the camera at Norfolk Developers Conference 2025"
         />
 
@@ -84,9 +84,9 @@ export default async function Home() {
 
       <ContentWrapper>
         <ContentImage
-          imgSrc="./work/ncc-adventure-2.jpg"
+          imgSrc="./work/ncc-adventure-2.webp"
           imgAlt="Frankie smiling in front of a building called 'Colwick Park Adventure Centre' with his team mates"
-          secondImgSrc="./frankie/frankie-thailand-cycling-crew.jpg"
+          secondImgSrc="./frankie/frankie-thailand-cycling-crew.webp"
           secondImgAlt="Frankie in Thailand with a group of local cyclists."
         />
 
