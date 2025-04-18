@@ -8,7 +8,7 @@ export default function TechStack({ techStack }: { techStack: number[] }) {
   });
 
   return (
-    <div className="flex gap-2 justify-end mt-4">
+    <section className="flex gap-2 justify-end mt-4">
       {matchedTechStack.map((stack) => {
         return (
           <div
@@ -23,6 +23,6 @@ export default function TechStack({ techStack }: { techStack: number[] }) {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 }

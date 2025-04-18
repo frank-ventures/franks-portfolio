@@ -159,12 +159,12 @@ details[open] > summary::before {
 
 /* --- --- --- --- */
 /* Nav bar links having sliding underlines */
-nav a::before {
+nav a::after {
   animation: slide 1.5s alternate infinite ease;
   transition: all 150ms ease-in;
 }
 
-nav a:hover::before {
+nav a:hover::after {
   animation: none;
 }
 

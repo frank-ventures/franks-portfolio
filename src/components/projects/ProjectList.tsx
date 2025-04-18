@@ -56,7 +56,7 @@ export default function ProjectsList() {
           See Projects by Tech Stack:
         </label>
         <select
-          className="p-2 rounded-md shadow-md bg-blue-400 border-b-blue-600 border-b-2 text-white font-semibold"
+          className="p-2 rounded-md shadow-md bg-blue-400 border-b-blue-600 border-b-2 text-black font-semibold"
           name="projectType"
           id="projectType"
           onChange={(e) => {
@@ -86,7 +86,6 @@ export default function ProjectsList() {
             >
               {/* Status and Title */}
               <div className="flex justify-between gap-5 last:m-10 min-h-20">
-                {/* TODO: Give this heading some kind of fancyness */}
                 <ProjectTitle title={project.title} />
                 <Status status={project.status} />
               </div>
@@ -105,9 +104,9 @@ export default function ProjectsList() {
                   <Link
                     href={project.githubRepo}
                     target="blank"
-                    className="flex flex-col gap-2 items-center bg-red-600 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200"
+                    className="flex flex-col gap-2 items-center bg-red-700 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200"
                   >
-                    <p className="font-semibold tracking-wide text-yellow-300">
+                    <p className="font-semibold tracking-wide text-yellow-300 text-shadow-withOutlineSm shadow-black text-lg">
                       View code
                     </p>
 
@@ -120,9 +119,9 @@ export default function ProjectsList() {
                   <Link
                     href={project.liveLink}
                     target="blank"
-                    className="flex flex-col gap-2 items-center bg-red-600 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200"
+                    className="flex flex-col gap-2 items-center bg-red-700 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200"
                   >
-                    <p className="font-semibold tracking-wide text-yellow-300">
+                    <p className="font-semibold tracking-wide text-yellow-300 text-shadow-withOutlineSm shadow-black text-lg">
                       Live site
                     </p>
 

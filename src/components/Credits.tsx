@@ -102,6 +102,10 @@ export default function Credits() {
       title: "SVG to Data URI (for CSS) Converter",
       link: "https://www.svgbackgrounds.com/tools/svg-to-css/",
     },
+    {
+      title: "Use Grid to animate height transitions",
+      link: "https://nemzes.net/posts/animating-height-auto/#the-solutions",
+    },
   ];
 
   return (
@@ -159,7 +163,7 @@ type Credit = {
 
 function Credit({ credit }: { credit: Credit }) {
   return (
-    <button className="min-h-24 text-yellow-300 font-semibold bg-red-600 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200">
+    <button className="min-h-24 text-yellow-300 text-shadow-withOutlineSm text-lg shadow-black font-semibold bg-red-800 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200">
       <a href={credit.link}>{credit.title}</a>
     </button>
   );

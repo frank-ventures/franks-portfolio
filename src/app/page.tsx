@@ -21,19 +21,17 @@ export default async function Home() {
       <IntroBar
         text={
           <>
-            <p className="flex flex-col items-center">
-              Who am I? I&apos;m{" "}
-              <span className="font-amazing tracking-widest">
-                <svg width="200" height="100">
-                  <path id="curve" d="M 15,65 Q 100,130 190,50" fill="none" />
-                  <text>
-                    <textPath fill="yellow" href="#curve">
-                      FRANKIE{" "}
-                    </textPath>
-                  </text>
-                </svg>
-              </span>
-            </p>
+            Who am I? I&apos;m{" "}
+            <span className="font-amazing tracking-widest">
+              <svg width="200" height="100">
+                <path id="curve" d="M 15,65 Q 100,130 190,50" fill="none" />
+                <text>
+                  <textPath fill="yellow" href="#curve">
+                    FRANKIE{" "}
+                  </textPath>
+                </text>
+              </svg>
+            </span>
           </>
         }
       />
@@ -71,7 +69,7 @@ export default async function Home() {
           </span>{" "}
           at{" "}
           <a
-            className="font-semibold text-blue-600 underline underline-offset-2 hover:text-blue-800"
+            className="font-semibold text-blue-800 underline underline-offset-2 hover:text-orange-800 hover:decoration-3 focus-visible:text-orange-800 focus-visible:decoration-3"
             href="https://techeducators.co.uk/"
           >
             Tech Educators
