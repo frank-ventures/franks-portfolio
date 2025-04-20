@@ -160,7 +160,7 @@ details[open] > summary::before {
 /* --- --- --- --- */
 /* Nav bar links having sliding underlines */
 nav a::after {
-  animation: slide 1.5s alternate infinite ease;
+  animation: slide 2.5s alternate infinite ease;
   transition: all 150ms ease-in;
 }
 
@@ -170,11 +170,11 @@ nav a:hover::after {
 
 @keyframes slide {
   0% {
-    left: 0px;
+    right: 1rem;
   }
 
   100% {
-    left: 10px;
+    right: 2rem;
   }
 }
 
@@ -195,4 +195,43 @@ nav a:hover::after {
   transform-style: preserve-3d;
   transition: transform 1.5s cubic-bezier(0.05, 0.5, 0, 1);
   will-change: transform;
+}
+
+/* Floating sliding bar underneath nav link items */
+.nav-link-item::after {
+  content: "";
+  width: 1rem;
+  height: 2px;
+  background-color: rgb(96 165 250);
+  top: 1.75rem;
+  position: absolute;
+  transition: all 500ms;
+}
+.nav-link-item:hover::after {
+  width: 100%;
+  background-color: rgb(234 88 12);
+  right: 0;
+}
+
+.nav-link-item[aria-current="page"] {
+  color: rgb(154 52 18);
+  &::before {
+    content: "→";
+    height: 2.5rem;
+    top: 0rem;
+    position: absolute;
+    width: 2.5rem;
+    left: -1.25rem;
+    font-weight: 800;
+  }
+  & img.svg-filter {
+    filter: invert(19%) sepia(64%) saturate(2265%) hue-rotate(355deg)
+      brightness(101%) contrast(91%);
+  }
+}
+
+/* This next class adds a blue 'overlay' to the svg icons in our nav bar */
+.svg-filter {
+  filter: invert(26%) sepia(81%) saturate(2581%) hue-rotate(205deg)
+    brightness(97%) contrast(95%);
 }

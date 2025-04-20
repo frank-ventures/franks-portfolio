@@ -13,18 +13,22 @@ const siteNavigation = [
   {
     href: "#top",
     text: "Top",
+    icon: "nav-icons/top.svg",
   },
   {
     href: "/",
     text: "Home",
+    icon: "nav-icons/home.svg",
   },
   {
     href: "/about",
     text: "About Me",
+    icon: "nav-icons/smiley-square.svg",
   },
   {
     href: "/credits",
     text: "Credits",
+    icon: "nav-icons/heart.svg",
   },
 ];
 
@@ -78,7 +82,7 @@ export default function QuickLinks({
         role="menubar"
         aria-label="navigation items"
       >
-        <li className="w-full" role="menuitem" aria-haspopup="false">
+        <li className="w-full hidden" role="menuitem" aria-haspopup="false">
           <ul
             className="grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] gap-4"
             role="menu"
@@ -89,7 +93,8 @@ export default function QuickLinks({
             >
               Page links
             </li>
-            {/* Anchors unique to each page */}
+            {/* Anchors unique to each page  */}
+            {/* Probably unecessary */}
             {pageAnchors?.map((link, index) => {
               return (
                 <li key={`anchor_${index}`} role="none">
@@ -106,26 +111,31 @@ export default function QuickLinks({
           </ul>
         </li>
 
-        <li className="w-full" role="menuitem" aria-haspopup="false">
+        <li
+          className="w-full flex justify-center"
+          role="menuitem"
+          aria-haspopup="false"
+        >
           <ul
-            className="grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] gap-4"
+            className="grid grid-cols-[repeat(auto-fit,minmax(80px,max-content))] w-full  gap-6 place-content-center"
             role="menu"
           >
             {/* Site navigation links. */}
-            <li
+            {/* <li
               className="text-end font-semibold col-span-full place-self-center"
               role="separator"
             >
               Site links
-            </li>
+            </li> */}
             {siteNavigation.map((link, index) => {
               return (
                 <li key={`permanentLink_${index}`}>
                   <Link
-                    className={`relative after:content-[''] after:w-4 after:h-[2px] after:bg-blue-400 after:top-[24px]  after:absolute hover:after:w-full hover:after:bg-orange-600 hover:after:left-0 after:transition-all after:duration-500 aria-[current=page]:text-orange-800 aria-[current=page]:before:content-['→'] aria-[current=page]:before:h-10 aria-[current=page]:before:-top-1.5 aria-[current=page]:before:absolute aria-[current=page]:before:w-10 aria-[current=page]:before:-left-5 aria-[current=page]:before:font-bold`}
+                    className={`flex items-center gap-[0.25rem] relative nav-link-item`}
                     href={`${link.href}`}
                     aria-current={pathname == link.href && "page"}
                   >
+                    <img src={link.icon} className="h-6 svg-filter" />
                     {link.text}
                   </Link>
                 </li>
