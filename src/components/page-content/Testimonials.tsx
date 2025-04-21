@@ -58,7 +58,7 @@ export default function Testimonials() {
             >
               <div className="absolute w-[96%] -top-6 left-2 border-2 border-blue-600 shadow shadow-black py-2 px-4 rounded-lg bg-blue-800 text-white">
                 <p className="text-sm text-pretty">
-                  <span className="font-bold mr-2">Role: </span>
+                  <span className="font-bold mr-2">My Role: </span>
                   {testimonial.capacity}
                 </p>
               </div>
