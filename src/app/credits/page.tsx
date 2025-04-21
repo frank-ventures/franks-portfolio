@@ -1,6 +1,6 @@
 import Credits from "@/components/Credits";
-import IntroBar from "@/components/header/IntroBar";
-import QuickLinks from "@/components/QuickLinks";
+import HeroIntro from "@/components/header/HeroIntro";
+import NavLinks from "@/components/header/NavLinks";
 
 const pageAnchors = [
   {
@@ -21,7 +21,7 @@ export default function CreditsPage() {
   return (
     <>
       <main className="flex flex-col w-full min-h-dvh items-center bg-slate-200">
-        <IntroBar
+        <HeroIntro
           text={
             <>
               Things used and useful{" "}
@@ -38,7 +38,7 @@ export default function CreditsPage() {
             </>
           }
         />
-        <QuickLinks pageAnchors={pageAnchors} />
+        <NavLinks pageAnchors={pageAnchors} />
 
         <Credits />
       </main>

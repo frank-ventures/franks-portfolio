@@ -9,7 +9,7 @@ const links = [
   { id: 2, href: "https://github.com/frank-ventures", text: "GitHub" },
 ];
 
-export default function NavBar() {
+export default function HeaderLinks() {
   return (
     <>
       <nav className="flex gap-4">

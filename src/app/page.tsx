@@ -1,8 +1,8 @@
 import ContentImage from "@/components/ContentImage";
 import ContentWrapper from "@/components/ContentWrapper";
-import IntroBar from "@/components/header/IntroBar";
+import HeroIntro from "@/components/header/HeroIntro";
 import ProjectsList from "@/components/projects/ProjectList";
-import QuickLinks from "@/components/QuickLinks";
+import NavLinks from "@/components/header/NavLinks";
 
 const pageAnchors = [
   {
@@ -18,7 +18,7 @@ const pageAnchors = [
 export default async function Home() {
   return (
     <main className="flex flex-col w-full items-center bg-slate-200">
-      <IntroBar
+      <HeroIntro
         text={
           <>
             Who am I? I&apos;m{" "}
@@ -37,7 +37,7 @@ export default async function Home() {
       />
 
       {/* Quick Links */}
-      <QuickLinks pageAnchors={pageAnchors} />
+      <NavLinks pageAnchors={pageAnchors} />
 
       {/* About Me */}
 

@@ -1,5 +1,5 @@
 import BlogPostExcerpt from "@/components/blog/BlogPostExcerpt";
-import IntroBar from "@/components/header/IntroBar";
+import HeroIntro from "@/components/header/HeroIntro";
 
 type PageProps = Promise<{ category: string }>;
 
@@ -18,7 +18,7 @@ export default async function BlogCategoryPage({
 
   return (
     <>
-      <IntroBar text={currentCategory} />
+      <HeroIntro text={currentCategory} />
       <BlogPostExcerpt postData={postData} />
     </>
   );

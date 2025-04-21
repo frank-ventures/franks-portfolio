@@ -1,7 +1,7 @@
 import ContentImage from "@/components/ContentImage";
 import ContentWrapper from "@/components/ContentWrapper";
-import IntroBar from "@/components/header/IntroBar";
-import QuickLinks from "@/components/QuickLinks";
+import HeroIntro from "@/components/header/HeroIntro";
+import NavLinks from "@/components/header/NavLinks";
 
 const pageAnchors = [
   {
@@ -19,7 +19,7 @@ const pageAnchors = [
 export default function About() {
   return (
     <main className="flex flex-col w-full min-h-dvh items-center bg-slate-200">
-      <IntroBar
+      <HeroIntro
         text={
           <>
             More about{" "}
@@ -36,7 +36,7 @@ export default function About() {
           </>
         }
       />
-      <QuickLinks pageAnchors={pageAnchors} />
+      <NavLinks pageAnchors={pageAnchors} />
 
       <ContentWrapper id="experiences">
         <ContentImage
@@ -128,7 +128,7 @@ export default function About() {
           </details>
         </section>
       </ContentWrapper>
-
+      {/* testimonials here */}
       <ContentWrapper id="move-to-tech">
         <ContentImage
           imgSrc="./frankie/frankie-nordevcon-convo.webp"
@@ -164,41 +164,26 @@ export default function About() {
           secondImgSrc="./frankie/frankie-climbing-adam-james.webp"
           secondImgAlt="A posed photo of Frankie with two of his friends at in indoor bouldering climbing centre."
         />
-        <p>Hobbies and interests. Parkour, climbing, cycling, gaming</p>
-      </ContentWrapper>
-
-      <ContentWrapper>
-        <div className="max-w-[74ch]">
-          <p className="p-2 font-bold">Get rid of and rewrite a lot of this</p>
+        <section className="flex flex-col gap-4 max-w-[74ch]">
+          <h2 className="ml-2 text-2xl font-bold">Me time</h2>
           <p>
-            I follow my interests, do things I find fun and try to make things a
-            little better than how I found them.
+            A rich life for me is more than just work, and over the years
+            I&apos;ve ended up with a hobby of collecting hobbies!
           </p>
           <p>
-            I&apos;m a coach and instructor. An ideas communicator. A writer.
+            Experimenting with different activities <em>(A.K.A Play!)</em> is
+            not only a human need, but also feeds into other areas of your life,
+            like your work.
           </p>
           <p>
-            I&apos;m a problem solver. An environment designer. A systems
-            creator.
+            For me, <span className="activity-highlight">Parkour</span>,{" "}
+            <span className="activity-highlight">Climbing</span>,{" "}
+            <span className="activity-highlight">Cycling</span> and{" "}
+            <span className="activity-highlight">Gaming</span> are just a few of
+            the things that keep me in and out of mischief when I&apos;m not
+            writing code or communicating with people!
           </p>
-          <p>A health, wellness, lifestyle & action instructor.</p>
-          <p>A good time delivery driver.</p>
-          <p>I cycle, climb, and I&apos;ve trained parkour since 2008.</p>
-          <p>
-            I like to ask better questions to make life simpler, more rewarding
-            and more fun.
-          </p>
-          <p>
-            I&apos;ve sunk hundreds if not thousands of hours into podcasts,
-            books and videos, trying to find those questions, habits and
-            mindsets which lead to a better life.
-          </p>
-          <p>
-            If you want the short version, the cheat code, it&apos;s this;
-            &quot;Move your body and soul. Observe your thoughts. Remember one
-            day you&apos;ll die.&quot;
-          </p>
-        </div>
+        </section>
       </ContentWrapper>
     </main>
   );

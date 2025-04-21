@@ -45,8 +45,8 @@
     hue-rotate(355deg) brightness(101%) contrast(91%);
 
   --primary-interactive-blue: hsl(213, 94%, 68%);
-  --primary-interactive-red: rgb(154 52 18);
-  --primary-active-orange: rgb(234 88 12);
+  --primary-interactive-red: hsl(15, 79%, 34%);
+  --primary-active-orange: hsl(21, 90%, 48%);
 }
 
 :focus-visible {
@@ -239,6 +239,13 @@ nav a:hover::after {
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, 15ch);
   justify-content: center;
+}
+
+.activity-highlight {
+  background-color: var(--primary-interactive-blue);
+  font-weight: 500;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
 }
 
 /* Potential foray into a 3D hover thing */

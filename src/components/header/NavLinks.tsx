@@ -32,7 +32,7 @@ const siteNavigation = [
   },
 ];
 
-export default function QuickLinks({
+export default function NavLinks({
   pageAnchors,
 }: {
   pageAnchors?: PageAnchors[] | undefined;

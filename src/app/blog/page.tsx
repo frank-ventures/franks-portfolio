@@ -1,5 +1,5 @@
 import BlogPostExcerpt from "@/components/blog/BlogPostExcerpt";
-import IntroBar from "@/components/header/IntroBar";
+import HeroIntro from "@/components/header/HeroIntro";
 import Link from "next/link";
 
 interface Category {
@@ -32,7 +32,7 @@ export default async function BlogPage() {
 
   return (
     <>
-      <IntroBar text={"Franks Nuggets of Knowledge"} />
+      <HeroIntro text={"Franks Nuggets of Knowledge"} />
 
       <div className="flex gap-4 justify-center p-2">
         {categoriesData.map((category: Category) => {
