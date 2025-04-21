@@ -104,7 +104,7 @@ export default function ProjectsList() {
                   <Link
                     href={project.githubRepo}
                     target="blank"
-                    className="flex flex-col gap-2 items-center bg-red-700 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200"
+                    className="flex flex-col gap-2 items-center bg-red-700 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 focus-visible:shadow-md focus-visible:shadow-black focus-visible:transform focus-visible:scale-110 transition duration-200"
                   >
                     <p className="font-semibold tracking-wide text-yellow-300 text-shadow-withOutlineSm shadow-black text-lg">
                       View code
@@ -119,7 +119,7 @@ export default function ProjectsList() {
                   <Link
                     href={project.liveLink}
                     target="blank"
-                    className="flex flex-col gap-2 items-center bg-red-700 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 transition duration-200"
+                    className="flex flex-col gap-2 items-center bg-red-700 border-l-2 border-r-2 border-b-2 border-black border-opacity-50 p-4 rounded-xl hover:shadow-md hover:shadow-black hover:transform hover:scale-110 focus-visible:shadow-md focus-visible:shadow-black focus-visible:transform focus-visible:scale-110 transition duration-200"
                   >
                     <p className="font-semibold tracking-wide text-yellow-300 text-shadow-withOutlineSm shadow-black text-lg">
                       Live site

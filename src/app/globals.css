@@ -33,6 +33,7 @@
 /* --- --- --- --- */
 /* Everything */
 :root {
+  /* The next 4 variables are used for the bouncing ball effect */
   --textsize: 25px;
   --ballwidth: calc(var(--textsize) - 9px);
   --ballheight: calc(var(--textsize) - 9px);
@@ -42,6 +43,10 @@
     hue-rotate(205deg) brightness(97%) contrast(95%);
   --svg-overlay-active: invert(19%) sepia(64%) saturate(2265%)
     hue-rotate(355deg) brightness(101%) contrast(91%);
+
+  --primary-interactive-blue: hsl(213, 94%, 68%);
+  --primary-interactive-red: rgb(154 52 18);
+  --primary-active-orange: rgb(234 88 12);
 }
 
 :focus-visible {
@@ -186,20 +191,20 @@ nav a:hover::after {
   content: "";
   width: 1rem;
   height: 2px;
-  background-color: rgb(96 165 250);
+  background-color: var(--primary-interactive-blue);
   top: 1.75rem;
   position: absolute;
   transition: all 500ms;
 }
 .nav-link-item:hover::after {
   width: 100%;
-  background-color: rgb(234 88 12);
+  background-color: var(--primary-active-orange);
   right: 0;
 }
 
 /* Targets the nav link which corresponds to the users current page */
 .nav-link-item[aria-current="page"] {
-  color: rgb(154 52 18);
+  color: var(--primary-interactive-red);
   &::before {
     content: "→";
     top: 0rem;
