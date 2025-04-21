@@ -15,6 +15,7 @@ const pageAnchors = [
   },
 ];
 
+// TODO: Make the "Who am I?" clickable so that it plays an audio of Jackie Chan - "who am iiiiiiiii"
 export default async function Home() {
   return (
     <main className="flex flex-col w-full items-center bg-slate-200">
@@ -69,7 +70,7 @@ export default async function Home() {
           </span>{" "}
           at{" "}
           <a
-            className="font-semibold text-blue-800 underline underline-offset-2 hover:text-orange-800 hover:decoration-3 focus-visible:text-orange-800 focus-visible:decoration-3"
+            className="external-inline-link"
             href="https://techeducators.co.uk/"
           >
             Tech Educators

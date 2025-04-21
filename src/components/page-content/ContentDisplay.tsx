@@ -1,6 +1,6 @@
 // In this component, we import ReactNode so that we can type our 'text' prop as that.
 // This lets us pass in simple strings, or, a more defined element so that we can set anchor links in the middle for example.
-// TODO: Should probably change this component to be a wrapper instead.
+
 import { ReactNode } from "react";
 
 interface Content {

@@ -45,8 +45,10 @@
     hue-rotate(355deg) brightness(101%) contrast(91%);
 
   --primary-interactive-blue: hsl(213, 94%, 68%);
+  --secondary-interactive-blue: hsl(226, 71%, 40%);
   --primary-interactive-red: hsl(15, 79%, 34%);
   --primary-active-orange: hsl(21, 90%, 48%);
+  --secondary-active-orange: hsl(15, 79%, 34%);
 }
 
 :focus-visible {
@@ -228,6 +230,21 @@ nav a:hover::after {
 }
 
 /* --- --- --- --- */
+/* On-page links */
+.external-inline-link {
+  font-weight: 600;
+  color: var(--secondary-interactive-blue);
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 0.125rem;
+}
+.external-inline-link:hover,
+:focus-visible {
+  text-decoration-thickness: 0.25rem;
+  color: var(--secondary-active-orange);
+}
+
+/* --- --- --- --- */
 /* Credits Page: Grid */
 .credit-container {
   container-type: inline-size;
@@ -246,6 +263,18 @@ nav a:hover::after {
   font-weight: 500;
   padding: 0 0.5rem;
   border-radius: 0.5rem;
+}
+
+/* --- --- --- --- */
+/* Testimonials */
+.testimonials {
+  container-type: inline-size;
+  & article .review {
+    @container (min-width: 30rem) {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  }
 }
 
 /* Potential foray into a 3D hover thing */
