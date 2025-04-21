@@ -30,11 +30,18 @@
   }
 }
 
+/* --- --- --- --- */
+/* Everything */
 :root {
   --textsize: 25px;
   --ballwidth: calc(var(--textsize) - 9px);
   --ballheight: calc(var(--textsize) - 9px);
   --topbounce: calc(var(--textsize) * 2);
+
+  --svg-overlay-inactive: invert(26%) sepia(81%) saturate(2581%)
+    hue-rotate(205deg) brightness(97%) contrast(95%);
+  --svg-overlay-active: invert(19%) sepia(64%) saturate(2265%)
+    hue-rotate(355deg) brightness(101%) contrast(91%);
 }
 
 :focus-visible {
@@ -43,7 +50,7 @@
 }
 
 /* --- --- --- --- */
-/* Change the marker on the Details list */
+/* About Page: Change the marker on the Details list */
 summary {
   list-style: none;
   display: flex;
@@ -72,20 +79,6 @@ summary::before {
 /* Transition effect */
 details[open] > summary::before {
   transform: rotate(90deg);
-}
-
-/* --- --- --- --- */
-/* Grid on credits page*/
-.credit-container {
-  container-type: inline-size;
-}
-.credit-grid {
-  margin-top: 2rem;
-  padding: 1rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, 15ch);
-  justify-content: center;
 }
 
 /* --- --- --- --- */
@@ -178,6 +171,7 @@ nav a:hover::after {
   }
 }
 
+/* This class targets the corner web SVGs */
 .st0 {
   fill: none;
   stroke: #000000;
@@ -185,16 +179,6 @@ nav a:hover::after {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
-}
-
-/* Potential foray into a 3D hover thing */
-/* https://dev.to/webdiscus/3d-parallax-effect-by-moving-mouse-using-htmlcss-7b2 */
-/* https://www.aktek.io/en/about-us */
-/* Potentially useful: https://github.com/codegenixdev/3d-parallax-tutorial */
-.threed-effect {
-  transform-style: preserve-3d;
-  transition: transform 1.5s cubic-bezier(0.05, 0.5, 0, 1);
-  will-change: transform;
 }
 
 /* Floating sliding bar underneath nav link items */
@@ -213,25 +197,51 @@ nav a:hover::after {
   right: 0;
 }
 
+/* Targets the nav link which corresponds to the users current page */
 .nav-link-item[aria-current="page"] {
   color: rgb(154 52 18);
   &::before {
     content: "→";
-    height: 2.5rem;
     top: 0rem;
     position: absolute;
-    width: 2.5rem;
     left: -1.25rem;
     font-weight: 800;
   }
   & img.svg-filter {
-    filter: invert(19%) sepia(64%) saturate(2265%) hue-rotate(355deg)
-      brightness(101%) contrast(91%);
+    filter: var(--svg-overlay-active);
   }
 }
 
-/* This next class adds a blue 'overlay' to the svg icons in our nav bar */
+/* Adds a coloured overlay to the SVG icons in the nav bar */
 .svg-filter {
-  filter: invert(26%) sepia(81%) saturate(2581%) hue-rotate(205deg)
-    brightness(97%) contrast(95%);
+  filter: var(--svg-overlay-inactive);
+}
+.nav-link-item:hover {
+  & img.svg-filter {
+    filter: var(--svg-overlay-active);
+  }
+}
+
+/* --- --- --- --- */
+/* Credits Page: Grid */
+.credit-container {
+  container-type: inline-size;
+}
+.credit-grid {
+  margin-top: 2rem;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, 15ch);
+  justify-content: center;
+}
+
+/* Potential foray into a 3D hover thing */
+/* https://dev.to/webdiscus/3d-parallax-effect-by-moving-mouse-using-htmlcss-7b2 */
+/* https://www.aktek.io/en/about-us */
+/* Potentially useful: https://github.com/codegenixdev/3d-parallax-tutorial */
+.threed-effect {
+  transform-style: preserve-3d;
+  transition: transform 1.5s cubic-bezier(0.05, 0.5, 0, 1);
+  will-change: transform;
 }

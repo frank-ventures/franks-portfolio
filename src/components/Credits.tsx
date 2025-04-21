@@ -72,6 +72,22 @@ export default function Credits() {
       title: "Spider 03 SVG",
       link: "https://www.svgrepo.com/svg/400766/spider",
     },
+    {
+      title: "Arrow Up in Square Icon",
+      link: "https://www.svgrepo.com/svg/521982/arrow-up-square",
+    },
+    {
+      title: "Home Icon",
+      link: "https://www.svgrepo.com/svg/529026/home",
+    },
+    {
+      title: "Smile Square Icon",
+      link: "https://www.svgrepo.com/svg/524998/smile-square",
+    },
+    {
+      title: "Heart Icon",
+      link: "https://www.svgrepo.com/svg/529012/heart",
+    },
   ];
 
   const codepenCredits = [
@@ -105,6 +121,10 @@ export default function Credits() {
     {
       title: "Use Grid to animate height transitions",
       link: "https://nemzes.net/posts/animating-height-auto/#the-solutions",
+    },
+    {
+      title: "HEX code to CSS Filter converter",
+      link: "https://isotropic.co/tool/hex-color-to-css-filter/",
     },
   ];
 

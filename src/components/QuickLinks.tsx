@@ -117,7 +117,7 @@ export default function QuickLinks({
           aria-haspopup="false"
         >
           <ul
-            className="grid grid-cols-[repeat(auto-fit,minmax(80px,max-content))] w-full  gap-6 place-content-center"
+            className="grid grid-cols-[repeat(auto-fit,minmax(80px,max-content))] w-full gap-8 place-content-center"
             role="menu"
           >
             {/* Site navigation links. */}
