@@ -9,7 +9,13 @@ export default function Header() {
         Franks P<span className="bounce"></span>rtfoli
         <span className="bounce"></span>
       </p> */}
-      <Link href={"/"}>Franks Portfolio</Link>
+      <Link
+        className="header-logo header-link sliding-underline
+        hover:bg-orange-600 hover:bg-opacity-50 border border-opacity-0 border-white  hover:border hover:border-gray-100 p-2 rounded-md"
+        href={"/"}
+      >
+        Franks Portfolio
+      </Link>
 
       <HeaderLinks />
     </header>

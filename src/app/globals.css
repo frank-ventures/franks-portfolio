@@ -47,6 +47,7 @@
   --primary-interactive-blue: hsl(213, 94%, 68%);
   --secondary-interactive-blue: hsl(226, 71%, 40%);
   --primary-interactive-red: hsl(15, 79%, 34%);
+  --primary-red: hsl(0, 84%, 60%);
   --primary-active-orange: hsl(21, 90%, 48%);
   --secondary-active-orange: hsl(15, 79%, 34%);
 }
@@ -54,6 +55,37 @@
 :focus-visible {
   outline: #b10ba8 4px solid;
   outline-offset: 2px;
+}
+
+/* --- --- --- --- */
+/* Header */
+/* Main Logo in Header */
+.header-logo {
+  animation: colour-pulse 1.5s infinite alternate;
+}
+.header-logo::after {
+  content: "";
+  height: 0.125rem;
+  width: 2rem;
+  background-color: var(--primary-red);
+  position: absolute;
+  top: 2rem;
+  transition: all 500ms;
+}
+
+.header-logo:hover::after {
+  width: 100%;
+  background-color: hsl(220, 13%, 91%);
+  left: 0;
+}
+
+@keyframes colour-pulse {
+  from {
+    color: hsl(220, 13%, 91%);
+  }
+  to {
+    color: orange;
+  }
 }
 
 /* --- --- --- --- */
@@ -159,6 +191,13 @@ details[open] > summary::before {
 
 /* --- --- --- --- */
 /* Nav bar links having sliding underlines */
+.sliding-underline {
+  position: relative;
+}
+.sliding-underline::after {
+  animation: slide 2.5s alternate infinite ease;
+}
+
 nav a::after {
   animation: slide 2.5s alternate infinite ease;
   transition: all 150ms ease-in;
