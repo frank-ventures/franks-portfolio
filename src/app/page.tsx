@@ -1,5 +1,5 @@
-import ContentImage from "@/components/ContentImage";
-import ContentWrapper from "@/components/ContentWrapper";
+import ContentImage from "@/components/page-content/ContentImage";
+import ContentWrapper from "@/components/page-content/ContentWrapper";
 import HeroIntro from "@/components/header/HeroIntro";
 import ProjectsList from "@/components/projects/ProjectList";
 import NavLinks from "@/components/header/NavLinks";

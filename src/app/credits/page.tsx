@@ -1,4 +1,4 @@
-import Credits from "@/components/Credits";
+import Credits from "@/components/page-content/Credits";
 import HeroIntro from "@/components/header/HeroIntro";
 import NavLinks from "@/components/header/NavLinks";
 

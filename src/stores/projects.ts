@@ -128,6 +128,17 @@ const techStacks: TechStacks[] = [
 
 const projects: Project[] = [
   {
+    title: "Concept: Coffee Shop Site",
+    image: "/projects/forum.webp",
+    alt: "Screenshot of a Monthly Finances Calculator. Shows a box displaying a users income, and their caluclated take-home pay after taxes.",
+    status: 2,
+    techStack: [5, 6, 7],
+    description:
+      "There's a fantastic coffee shop near home which not only does awesome drinks, but also is wonderfully designed and marketed. It inspired me to create a concept of their website. Lots still to do!",
+    githubRepo: "https://github.com/frank-ventures/forum-coffee",
+    liveLink: "https://forum-speciality-coffee.vercel.app/",
+  },
+  {
     title: "Monthly Finances Calculator",
     image: "/projects/monthly-finances.webp",
     alt: "Screenshot of a Monthly Finances Calculator. Shows a box displaying a users income, and their caluclated take-home pay after taxes.",

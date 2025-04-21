@@ -1,7 +1,8 @@
-import ContentImage from "@/components/ContentImage";
-import ContentWrapper from "@/components/ContentWrapper";
+import ContentImage from "@/components/page-content/ContentImage";
+import ContentWrapper from "@/components/page-content/ContentWrapper";
 import HeroIntro from "@/components/header/HeroIntro";
 import NavLinks from "@/components/header/NavLinks";
+import Testimonials from "@/components/page-content/Testimonials";
 
 const pageAnchors = [
   {
@@ -128,7 +129,9 @@ export default function About() {
           </details>
         </section>
       </ContentWrapper>
-      {/* testimonials here */}
+
+      {/* <Testimonials /> */}
+
       <ContentWrapper id="move-to-tech">
         <ContentImage
           imgSrc="./frankie/frankie-nordevcon-convo.webp"
