@@ -41,7 +41,6 @@ export default async function Home() {
       <NavLinks pageAnchors={pageAnchors} />
 
       {/* About Me */}
-
       <ContentWrapper id="about-me">
         <ContentImage
           imgSrc="./frankie/frankie-manchester.webp"
@@ -96,23 +95,23 @@ export default async function Home() {
         </p>
       </ContentWrapper>
 
-      {/* TODO: an about page, then uncomment this and link to it */}
-      {/* <ContentWrapper>
-        <ContentImage imgSrc="something" imgAlt="something" />
+      <ContentWrapper>
+        <ContentImage
+          imgSrc="frankie/frankie-adam-laughing.webp"
+          imgAlt="Frankie and his friend Adam having a big laugh out in Nottingham."
+          secondImgSrc="frankie/frankie-and-doggo.webp"
+          secondImgAlt="Frankie stroking a curly-haired dog in a garden."
+        />
         <p className="max-w-[74ch]">
-          But you can read more about all that{" "}
-          <a className="text-orange-600 hover:underline" href="/about">
+          You can read more about all that &quot;lifestory&quot; stuff{" "}
+          <a className="external-inline-link" href="/about">
             here
           </a>{" "}
-          <span className="italic">
-            (and more, like how I think bicycles are utterly and magically
-            awesome)
-          </span>
+          .
         </p>
-      </ContentWrapper> */}
+      </ContentWrapper>
 
       {/* My Projects */}
-
       <ProjectsList />
     </main>
   );
