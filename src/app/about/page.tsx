@@ -130,7 +130,7 @@ export default function About() {
         </section>
       </ContentWrapper>
 
-      {/* <Testimonials /> */}
+      <Testimonials />
 
       <ContentWrapper id="move-to-tech">
         <ContentImage
