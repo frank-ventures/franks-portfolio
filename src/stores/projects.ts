@@ -128,9 +128,20 @@ const techStacks: TechStacks[] = [
 
 const projects: Project[] = [
   {
+    title: "Colour Complimenter",
+    image: "/projects/colourcomplimenter.webp",
+    alt: "Screenshot of an app which lets a user find complimentary colours.",
+    status: 1,
+    techStack: [1, 2, 3, 10],
+    description:
+      "There's a very cool API simply called 'The Color API'. Despite its simple name, it's extensive and packed full of information. It's well worth a look. This app lets you find complimentary colours and copy them to your clipboard.",
+    githubRepo: "https://github.com/frank-ventures/colour-api-tool",
+    liveLink: "https://colours.frankieshrieves.co.uk/",
+  },
+  {
     title: "Concept: Coffee Shop Site",
     image: "/projects/forum.webp",
-    alt: "Screenshot of a Monthly Finances Calculator. Shows a box displaying a users income, and their caluclated take-home pay after taxes.",
+    alt: "Screenshot of a website promoting a coffee shop.",
     status: 2,
     techStack: [5, 6, 7],
     description:
