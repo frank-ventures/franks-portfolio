@@ -7,7 +7,7 @@ export default function HeroIntro({
   audio,
 }: {
   text: ReactNode;
-  audio: string;
+  audio?: string;
 }) {
   const [thisAudio] = useState(new Audio(audio)) || "";
   const [playing, setPlaying] = useState(false);
