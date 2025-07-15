@@ -17,8 +17,12 @@ export default function HeroIntro({
   }
 
   useEffect(() => {
-    playing ? thisAudio.play() : thisAudio.pause();
-    thisAudio.currentTime = 0;
+    if (playing) {
+      thisAudio.play();
+    } else {
+      thisAudio.pause();
+      thisAudio.currentTime = 0;
+    }
   }, [playing]);
 
   useEffect(() => {
