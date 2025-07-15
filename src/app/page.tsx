@@ -35,6 +35,7 @@ export default async function Home() {
             </span>
           </>
         }
+        audio={"./audio/who-am-i.mp3"}
       />
 
       {/* Quick Links */}
