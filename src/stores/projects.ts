@@ -128,6 +128,29 @@ const techStacks: TechStacks[] = [
 
 const projects: Project[] = [
   {
+    title: "What Bin Is It?!",
+    image: "/projects/what-bin.webp",
+    alt: "Screenshot of an app which lets me check which bin to put out.",
+    status: 1,
+    techStack: [5, 7, 10],
+    description:
+      "Do you know what's annoying? Checking for binfluencers. Even moreso? Loading up your council website, finding the bin page, typing your postcode, finding your door number, THEN finding the information you need. Do you know what's great? This app.",
+    githubRepo:
+      "https://github.com/frank-ventures/market-street-bin-collection",
+    liveLink: "https://bins.frankieshrieves.co.uk/",
+  },
+  {
+    title: "Countdown Timer",
+    image: "/projects/countdowns.webp",
+    alt: "Screenshot of an app which lets a user run a countdown timer.",
+    status: 1,
+    techStack: [1, 2, 3],
+    description:
+      "I wanted to make my own countdown timer for in class, so that I could customise the time limit and add my own sound effects. Tick and tick!",
+    githubRepo: "https://github.com/frank-ventures/countdowns",
+    liveLink: "https://countdowns.frankieshrieves.co.uk/",
+  },
+  {
     title: "Colour Complimenter",
     image: "/projects/colourcomplimenter.webp",
     alt: "Screenshot of an app which lets a user find complimentary colours.",
